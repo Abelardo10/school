@@ -39,13 +39,13 @@ error_reporting(E_ALL);
         ,documento_identidad
         ,email
         ,grupo_sanguineo) VALUES ('";
-        $var_consulta .= $_POST['primer_nombre']."'
-        ,'".$_POST['segundo_nombre']."'
-        ,'".$_POST['apellido_paterno']."'
-        ,'".$_POST['apellido_materno']."'
-        ,".$_POST['documento_identidad']."
-        ,'".$_POST['email']."'
-        ,'".$_POST['grupo_sanguineo']."');";
+        $var_consulta .= $_POST['TxtPrimer_nombre']."'
+        ,'".$_POST['TxtSegundo_nombre']."'
+        ,'".$_POST['TxtApellido_paterno']."'
+        ,'".$_POST['TxtApellido_materno']."'
+        ,".$_POST['TxtIdentificacion']."
+        ,'".$_POST['TxtEmail']."'
+        ,'".$_POST['ddlTipo_de_Sangre']."');";
         $c->query($var_consulta);
         $con->cerrarConexion();
         header("Location: ../Estudiantes.php?"); 
@@ -54,7 +54,7 @@ error_reporting(E_ALL);
     function eliminar(){
         $con = new MySQL();
         $c = $con->abrirConexion();        
-        $var_consulta  = "DELETE FROM tbestudiante WHERE  Estudiante_id = '".$_POST['ide']."';"; 
+        $var_consulta  = "DELETE FROM tbestudiante WHERE  Estudiante_id = '".$_POST['TxtIde']."';"; 
         $c->query($var_consulta);
         $con->cerrarConexion();
         header("Location: ../Estudiantes.php?"); 
@@ -65,13 +65,13 @@ error_reporting(E_ALL);
     function actualizar(){
         $con = new MySQL();
         $c = $con->abrirConexion();
-        $var_consulta  = "UPDATE tbestudiante SET nombre = '".$_POST['nombre']."'
+        $var_consulta  = "UPDATE tbestudiante SET primer_nombre = '".$_POST['txtPrimer_Nombre']."'
         ,nacimiento = ".$_POST['nacimiento']."
         ,raza='".$_POST['raza']."'
         ,peso='".$_POST['peso']."'
         ,sexo='".$_POST['sexo']."'
         ,talla='".$_POST['talla']."'
-        ,color='".$_POST['color']."' WHERE Estudiante_id = '".$_POST['id']."'";  
+        ,color='".$_POST['color']."' WHERE Estudiante_id = '".$_POST['TxtId']."'";  
         $c->query($var_consulta);
         $con->cerrarConexion();
         header("Location: ../Estudiantes.php?"); 

@@ -108,11 +108,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- Institutes -->
 	<div class="gallery">
 		
-			<h5 class="main-w3l-title">Estudiantes</h5>
+			<h5 class="main-w3l-title">Grado</h5>
 			
 			<div class="container">				
 
-					<form id="FrmEstudiantes" action="Procesa/P_estudiante.php?metodo=save" method="post" style="background-color: #f5f5f5;padding: 5px; margin:20px">
+					<form id="FrmGrado" action="Procesa/P_grado.php?metodo=save" method="post" style="background-color: #f5f5f5;padding: 5px; margin:20px">
 
 						<div class="card-header"><h1>Registrar Grado</h1></div>
 
@@ -121,66 +121,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="col-md-6 container">	
 
 								<div class="form-group">
-								<input type="text" name="TxtPrimer_Nombre" id="TxtPrimer_Nombre" class="form-control" placeholder="Primer Nombre" required="Campo Requerido">
-								</div>
-
-								<div class="form-group">
-								<input type="text" name="TxtSegundo_Nombre" id="TxtSegundo_Nombre" class="form-control" placeholder="Segundo Nombre">
-								</div>
-
-								<div class="form-group">
-								<input type="text" name="TxtApellido_Paterno" id="TxtApellido_Paterno" class="form-control" placeholder="Apellido Paterno" required="Campo Requerido">
-								</div>
-
-								<div class="form-group">
-								<input type="text" name="TxtApellido_Materno" id="TxtApellido_Materno" class="form-control" placeholder="Apellido Materno">
-								</div>
-
-								<div class="form-group">
-								<input type="number" name="TxtIdentificacion" id="TxtIdentificacion" class="form-control" maxlength="10" minlength="8" placeholder="Identificación">
-								</div>
-							</div>
-							
-
-							   							 
-							<div class="col-md-6 container">	
-
-								<div class="form-group">
-								<input type="email" name="TxtEmail" id="TxtEmail" class="form-control" placeholder="E-mail">
-								</div>
-
-								 <div class="form-group">
-							          <label for="Sexo">Tipo de Sangre</label>
-							          <select class="form-control" id="ddlTipo_de_Sangre" name="ddlTipo_de_Sangre">
-							            <option value="select">Seleccione...</option>
-							            <option value="A+">A+</option>
-							            <option value="A-">A-</option> 
-							            <option value="B+">B+</option> 
-							            <option value="B-">B-</option> 
-							            <option value="O+">O+</option> 
-							            <option value="AB+">AB+</option> 
-							            <option value="AB-">AB-</option>            
-							          </select>
-							     </div>
-
-								 <div class="form-group">
-							          <label for="Sexo">Grado</label>
-							          <select class="form-control" id="ddlGrado" name="ddlGrado">
-							            <option value="select">Seleccione...</option>
-							                       
-							          </select>
-							     </div>
-
-								<div class="form-group">
-							          <label for="Sexo">Barrio</label>
-							          <select class="form-control" id="ddlBarrio" name="ddlBarrio">
-							            <option value="select">Seleccione...</option>
-							                       
-							          </select>
-							     </div>
+								<input type="text" name="TxtGrado" id="TxtGrado" class="form-control" placeholder="Grado" required="Campo Requerido">
+								</div>						
 
 								
-							</div>
+							</div>						   							 
+							
 						</div>	<!--fin segunda fila-->						
 					</div>
 						
@@ -199,19 +145,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Primer Nomre</th>
-              <th scope="col">Segundo Nombre</th>
-              <th scope="col">Apellido Paterno</th>
-              <th scope="col">Apellido Materno</th>
-              <th scope="col">Identificación</th>
-              <th scope="col">E-mail</th>
-              <th scope="col">Grupo Sanguineo</th>
+              <th scope="col">Grado</th>                            
               <th scope="col">Editar</th>
               <th scope="col">Eliminar</th>
                            
             </tr>
           </thead>
-          <tbody id="t_estudiante" >
+          <tbody id="t_grado" >
           </tbody>
       </table>
     </div>
@@ -296,47 +236,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
 
     function editar(dato){
-      $("#ide").val(dato.Estudiante_id);
-      $("#id").val(dato.Estudiante_id);
-      $("#TxtPrimer_Nombre").val(dato.primer_nombre);
-      $("#TxtSegundo_Nombre").val(dato.segundo_nombre);
-      $("#TxtApellido_Paterno").val(dato.apellido_paterno);
-      $("#TxtApellido_Materno").val(dato.apellido_materno);
-      $("#TxtIdentificacion").val(dato.documento_identidad);
-      $("#TxtEmail").val(dato.email);
-      $("#ddlTipo_de_Sangre").val(dato.grupo_sanguineo);
-  
-
-
+      $("#ide").val(dato.Grado_id);
+      $("#id").val(dato.Grado_id);
+      $("#TxtGrado").val(dato.grado);     
+     
     }
 
     function consultar()
     {     
             $.ajax({
               type : "POST",
-              url : "Procesa/P_estudiante.php?metodo=listar",
+              url : "Procesa/P_grado.php?metodo=listar",
               data : { 
                                                         
               },
               success : function( data ){
-              $('#t_estudiante').html(data);
+              $('#t_grado').html(data);
 
               }
             });         
     }
 
     function eliminar()
-    {     
-     
+    {          
 
             $.ajax({
               type : "POST",
-              url : "Procesa/P_estudiante.php?metodo=eliminar",
+              url : "Procesa/P_grado.php?metodo=eliminar",
               data : { 
                                                         
               },
               success : function( data ){
-              $('#t_estudiante').html(data);
+              $('#t_grado').html(data);
 
               }
              

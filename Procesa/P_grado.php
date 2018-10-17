@@ -15,9 +15,9 @@ error_reporting(E_ALL);
         }else{
             guardar();
         }
-    }if($_REQUEST['metodo'] == "ConsultarEstudiante"){
+    }if($_REQUEST['metodo'] == "ConsultarGrado"){
 
-          ConsultarEstudiante();
+          ConsultarGrado();
 
     }else{
         listar();
@@ -32,32 +32,21 @@ error_reporting(E_ALL);
         $con = new MySQL();
         $c = $con->abrirConexion();        
         $var_consulta  = "INSERT INTO tbgrado (
-        primer_nombre
-        ,segundo_nombre
-        ,apellido_paterno
-        ,apellido_materno
-        ,documento_identidad
-        ,email
-        ,grupo_sanguineo) VALUES ('";
-        $var_consulta .= $_POST['primer_nombre']."'
-        ,'".$_POST['segundo_nombre']."'
-        ,'".$_POST['apellido_paterno']."'
-        ,'".$_POST['apellido_materno']."'
-        ,".$_POST['documento_identidad']."
-        ,'".$_POST['email']."'
-        ,'".$_POST['grupo_sanguineo']."');";
+        grado
+       ) VALUES ('";
+        $var_consulta .= $_POST['txtGrado']."');";
         $c->query($var_consulta);
         $con->cerrarConexion();
-        header("Location: ../Estudiantes.php?"); 
+        header("Location: ../Grado.php?"); 
     }
 
     function eliminar(){
         $con = new MySQL();
         $c = $con->abrirConexion();        
-        $var_consulta  = "DELETE FROM tbgrado WHERE  Estudiante_id = '".$_POST['ide']."';"; 
+        $var_consulta  = "DELETE FROM tbgrado WHERE  Grado_id = '".$_POST['txtIde']."';"; 
         $c->query($var_consulta);
         $con->cerrarConexion();
-        header("Location: ../Estudiantes.php?"); 
+        header("Location: ../Grado.php?"); 
     }
 
 
@@ -65,53 +54,29 @@ error_reporting(E_ALL);
     function actualizar(){
         $con = new MySQL();
         $c = $con->abrirConexion();
-        $var_consulta  = "UPDATE tbgrado SET nombre = '".$_POST['nombre']."'
-        ,nacimiento = ".$_POST['nacimiento']."
-        ,raza='".$_POST['raza']."'
-        ,peso='".$_POST['peso']."'
-        ,sexo='".$_POST['sexo']."'
-        ,talla='".$_POST['talla']."'
-        ,color='".$_POST['color']."' WHERE Estudiante_id = '".$_POST['id']."'";  
+        $var_consulta  = "UPDATE tbgrado SET grado = '".$_POST['txtGrado']."'
+        WHERE Grado_id = '".$_POST['txtId']."'";  
         $c->query($var_consulta);
         $con->cerrarConexion();
-        header("Location: ../Estudiantes.php?"); 
+        header("Location: ../Grado.php?"); 
     }
 
     function listar(){
 
         $con = new MySQL();
         $c = $con->abrirConexion();
-        $var_consulta  = "SELECT Estudiante_id,primer_nombre,segundo_nombre,apellido_paterno
-                                ,apellido_materno,documento_identidad,email,grupo_sanguineo FROM tbgrado;";  
+        $var_consulta  = "SELECT Grado_id,grado FROM tbgrado;";  
        
         $query = mysqli_query($c, $var_consulta);
         while($result = mysqli_fetch_array($query))
         {
           echo "<tr>
                 <td>
-                    ".$result["Estudiante_id"]."
+                    ".$result["Grado_id"]."
                 </td>
                 <td>
-                    ".$result["primer_nombre"]."
-                </td>
-                <td>
-                    ".$result["segundo_nombre"]."
-                </td>
-                <td>
-                    ".$result["apellido_paterno"]."
-                </td>
-                <td>
-                    ".$result["apellido_materno"]."
-                </td>
-                 <td>
-                    ".$result["documento_identidad"]."
-                </td>
-                 <td>
-                    ".$result["email"]."
-                </td>
-                <td>
-                    ".$result["grupo_sanguineo"]."
-                </td>
+                    ".$result["grado"]."
+                </td>                
 
                 ";
 
@@ -127,17 +92,17 @@ error_reporting(E_ALL);
 
     
 
-    function ConsultarEstudiante(){
+    function ConsultarGrado(){
         $con = new MySQL();
         $c = $con->abrirConexion();
-        $var_consulta  = "SELECT Estudiante_id,primer_nombre FROM tbestudiante;";  
+        $var_consulta  = "SELECT Grado_id,grado FROM tbgrado;";  
        
         $query = mysqli_query($c, $var_consulta);
         $rows = array();
 
         while($result = mysqli_fetch_array($query))
         {
-            $rows[] =  $result['primer_nombre'].'_'.$result['Estudiante_id'];
+            $rows[] =  $result['grado'].'_'.$result['Grado_id'];
 
         }
 
