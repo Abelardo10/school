@@ -4,6 +4,14 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php
+ 
+if(isset($_GET["error"]) && $_GET["error"] != "login") {
+    header("Location: Estudiantes.php");
+  }
+ 
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -118,7 +126,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<div class="form-group">
 							 <div class="row"><!--primera fila-->   							 
-							<div class="col-md-6 container">	
+							<div class="col-md-6 container">
+
+								<div class="form-group">
+								<input type="number" name="TxtId" id="TxtId" class="form-control" placeholder="IdEstudiante" enable="false" >
+								</div>	
 
 								<div class="form-group">
 								<input type="text" name="TxtPrimer_Nombre" id="TxtPrimer_Nombre" class="form-control" placeholder="Primer Nombre" required="Campo Requerido">
@@ -184,7 +196,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>	<!--fin segunda fila-->						
 					</div>
 						
- 					<input type="submit" class="btn btn-primary btn-block"></input>
+ 					<input type="submit" class="btn btn-primary btn-block" value="Guardar"></input>
 
 					</form>
 				
@@ -296,7 +308,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
 
     function editar(dato){
-      $("#ide").val(dato.Estudiante_id);
+      $("#TxtId").val(dato.Estudiante_id);
       $("#id").val(dato.Estudiante_id);
       $("#TxtPrimer_Nombre").val(dato.primer_nombre);
       $("#TxtSegundo_Nombre").val(dato.segundo_nombre);
@@ -304,8 +316,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       $("#TxtApellido_Materno").val(dato.apellido_materno);
       $("#TxtIdentificacion").val(dato.documento_identidad);
       $("#TxtEmail").val(dato.email);
-      $("#ddlTipo_de_Sangre").val(dato.grupo_sanguineo);
-  
+      $("#ddlTipo_de_Sangre").val(dato.grupo_sanguineo); 
+      $("#ddlGrado").val(dato.Grado_id); 
+      $("#ddlBarrio").val(dato.Barrio_id); 
 
 
     }
@@ -326,14 +339,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     }
 
     function eliminar()
-    {     
-     
+    {          
 
             $.ajax({
               type : "POST",
               url : "Procesa/P_estudiante.php?metodo=eliminar",
               data : { 
-                                                        
+                                                   
               },
               success : function( data ){
               $('#t_estudiante').html(data);

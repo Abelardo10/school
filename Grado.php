@@ -118,7 +118,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<div class="form-group">
 							 <div class="row"><!--primera fila-->   							 
-							<div class="col-md-6 container">	
+							<div class="col-md-6 container">
+
+								<div class="form-group">
+								<input type="number" name="TxtId" id="TxtId" class="form-control" placeholder="IdGrado" enable="false" >
+								</div>	
 
 								<div class="form-group">
 								<input type="text" name="TxtGrado" id="TxtGrado" class="form-control" placeholder="Grado" required="Campo Requerido">
@@ -236,8 +240,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
 
     function editar(dato){
-      $("#ide").val(dato.Grado_id);
-      $("#id").val(dato.Grado_id);
+      $("#TxtId").val(dato.Grado_id);      
       $("#TxtGrado").val(dato.grado);     
      
     }

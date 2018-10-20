@@ -34,7 +34,7 @@ error_reporting(E_ALL);
         $var_consulta  = "INSERT INTO tbgrado (
         grado
        ) VALUES ('";
-        $var_consulta .= $_POST['txtGrado']."');";
+        $var_consulta .= $_POST['TxtGrado']."');";
         $c->query($var_consulta);
         $con->cerrarConexion();
         header("Location: ../Grado.php?"); 
@@ -54,7 +54,7 @@ error_reporting(E_ALL);
     function actualizar(){
         $con = new MySQL();
         $c = $con->abrirConexion();
-        $var_consulta  = "UPDATE tbgrado SET grado = '".$_POST['txtGrado']."'
+        $var_consulta  = "UPDATE tbgrado SET grado = '".$_POST['TxtGrado']."'
         WHERE Grado_id = '".$_POST['txtId']."'";  
         $c->query($var_consulta);
         $con->cerrarConexion();

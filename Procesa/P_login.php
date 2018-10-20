@@ -29,7 +29,7 @@ $passok;
  
                          $userok = $row["usuario"];
                          $passok = $row["password"];
-                         //$_SESSION["Rol_id"]=$row["Rol"];
+                        // $_SESSION["Rol_id"]=$row["Rol"];
 
                     }
  

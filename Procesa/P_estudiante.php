@@ -32,20 +32,26 @@ error_reporting(E_ALL);
         $con = new MySQL();
         $c = $con->abrirConexion();        
         $var_consulta  = "INSERT INTO tbestudiante (
-        primer_nombre
+         primer_nombre
         ,segundo_nombre
         ,apellido_paterno
         ,apellido_materno
         ,documento_identidad
         ,email
-        ,grupo_sanguineo) VALUES ('";
+        ,grupo_sanguineo
+        ,Grado_id
+        ,Barrio_id) VALUES ('";
         $var_consulta .= $_POST['TxtPrimer_nombre']."'
         ,'".$_POST['TxtSegundo_nombre']."'
         ,'".$_POST['TxtApellido_paterno']."'
         ,'".$_POST['TxtApellido_materno']."'
         ,".$_POST['TxtIdentificacion']."
         ,'".$_POST['TxtEmail']."'
-        ,'".$_POST['ddlTipo_de_Sangre']."');";
+        ,'".$_POST['ddlTipo_de_Sangre']."'
+        ,".$_POST['ddlGrado']."
+        ,".$_POST['ddlBarrio']."
+
+        );";
         $c->query($var_consulta);
         $con->cerrarConexion();
         header("Location: ../Estudiantes.php?"); 
@@ -54,7 +60,7 @@ error_reporting(E_ALL);
     function eliminar(){
         $con = new MySQL();
         $c = $con->abrirConexion();        
-        $var_consulta  = "DELETE FROM tbestudiante WHERE  Estudiante_id = '".$_POST['TxtIde']."';"; 
+        $var_consulta  = "DELETE * FROM tbestudiante WHERE  Estudiante_id = ".$_POST['TxtId'].";"; 
         $c->query($var_consulta);
         $con->cerrarConexion();
         header("Location: ../Estudiantes.php?"); 
@@ -114,10 +120,12 @@ error_reporting(E_ALL);
                 </td>
 
                 ";
-
-                if($_SESSION["rol"] === $_SESSION["tipou"]){
-                    echo"<td>  <button class='btn btn-primary'  onclick='editar(".json_encode($result).")'>Editar </button> </td>";
+                
+                 echo"<td>  <button class='btn btn-primary'  onclick='editar(".json_encode($result).")'>Editar </button> </td>";
                      echo"<td>  <button class='btn btn-primary'  onclick='eliminar(".json_encode($result).")'>Eliminar </button> </td>";
+                if($_SESSION["rol"] === $_SESSION["tipou"]){
+                   
+
                 }
 
                 echo "</tr>";

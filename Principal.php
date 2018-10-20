@@ -72,8 +72,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li><a href="#">Docentes</a></li>
 										<li><a href="Estudiantes.php">Estudiantes</a></li>
 										<li><a href="#">Competencias</a></li>
-										<li><a href="#">Grados</a></li>
+										<li><a href="Grado.php">Grados</a></li>
 										<li><a href="#">Barrios</a></li>
+										<li><a href="Rol.php">Rol</a></li>
+										<li><a href="Status.php">Estatus</a></li>
 									</ul>
 								</li>
 								<li><a href="about.html">About</a></li>
