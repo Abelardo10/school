@@ -6,10 +6,7 @@ $userok;
 $passok;
 
 
-
      if(isset($_POST["btn_Login"])) {
-
-
  
                $loginNombre = trim($_POST["txtUsuario"]);
                $loginPassword = trim($_POST["txtPassword"]);
