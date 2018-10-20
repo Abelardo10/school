@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="header-bottom-w3layouts">
 					<div class="main-w3ls-logo">
 
-						<h1><a href="index.html"><img src="images/logo.png" width="100" height="100"></span>English School</a></h1>
+						<h1><a href="index.php"><img src="images/logo.png" width="100" height="100"></span>English School</a></h1>
 					</div>
 					<!-- navigation -->
 					<nav class="navbar navbar-default">
@@ -65,7 +65,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a class="active" href="index.html">Home</a></li>
+								<li><a class="active" href="index.php">Home</a></li>
 								<li><a href="about.html">About</a></li>
 								<li><a href="courses.html">Courses</a></li>
 								<li><a href="institutes.html">English School</a></li>
@@ -204,10 +204,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="header-top">
 					<h3 class="subheading-wthree white-clr">Let's Login Now</h3>
 					<span>Get Enrolled & Start better future with us!</span>
-					<ul class="form-buttons">
-						<li><a href="#" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Register</a></li>
-					</ul>
-
+					
 					<ul class="form-buttons">
 						<li><a href="Login/Login.php"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Login</a></li>
 					</ul>
