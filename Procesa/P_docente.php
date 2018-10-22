@@ -15,9 +15,9 @@ error_reporting(E_ALL);
         }else{
             guardar();
         }
-    }if($_REQUEST['metodo'] == "ConsultarEstudiante"){
+    }if($_REQUEST['metodo'] == "ConsultarDocente"){
 
-          ConsultarEstudiante();
+          ConsultarDocente();
 
     }else{
         listar();
@@ -31,7 +31,7 @@ error_reporting(E_ALL);
     function guardar(){
         $con = new MySQL();
         $c = $con->abrirConexion();        
-        $var_consulta  = "INSERT INTO tbestudiante (
+        $var_consulta  = "INSERT INTO tbdocente (
          primer_nombre
         ,segundo_nombre
         ,apellido_paterno
@@ -53,16 +53,16 @@ error_reporting(E_ALL);
         );";
         $c->query($var_consulta);
         $con->cerrarConexion();
-        header("Location: ../Estudiantes.php?"); 
+        header("Location: ../Docente.php?"); 
     }
 
     function eliminar(){
         $con = new MySQL();
         $c = $con->abrirConexion();        
-        $var_consulta  = "DELETE FROM tbestudiante WHERE  Estudiante_id == ".$_POST['TxtId'].";"; 
+        $var_consulta  = "DELETE FROM tbdocente WHERE  Docente_id == ".$_POST['TxtId'].";"; 
         $c->query($var_consulta);        
         $con->cerrarConexion();
-        header("Location: ../Estudiantes.php?"); 
+        header("Location: ../Docente.php?"); 
     }
 
 
@@ -70,7 +70,7 @@ error_reporting(E_ALL);
     function actualizar(){
         $con = new MySQL();
         $c = $con->abrirConexion();
-        $var_consulta  = "UPDATE tbestudiante 
+        $var_consulta  = "UPDATE tbdocente 
         SET primer_nombre = '".$_POST['TxtPrimer_Nombre']."'
         ,segundo_nombre = '".$_POST['TxtSegundo_Nombre']."'
         ,apellido_paterno='".$_POST['TxtApellido_Paterno']."'
@@ -79,25 +79,25 @@ error_reporting(E_ALL);
         ,documento_identidad=".$_POST['TxtIdentificacion']."
         ,email='".$_POST['TxtEmail']."'
         ,grupo_sanguineo='".$_POST['ddlTipo_de_Sangre']."'         
-        WHERE Estudiante_id = ".$_POST['TxtId'].";";  
+        WHERE Docente_id = ".$_POST['TxtId'].";";  
         $c->query($var_consulta);
         $con->cerrarConexion();
-        header("Location: ../Estudiantes.php?"); 
+        header("Location: ../Docente.php?"); 
     }
 
     function listar(){
 
         $con = new MySQL();
         $c = $con->abrirConexion();
-        $var_consulta  = "SELECT Estudiante_id,primer_nombre,segundo_nombre,apellido_paterno
-                                ,apellido_materno, tipo_documento,documento_identidad,email,grupo_sanguineo FROM tbestudiante;";  
+        $var_consulta  = "SELECT Docente_id,primer_nombre,segundo_nombre,apellido_paterno
+                                ,apellido_materno, tipo_documento,documento_identidad,email,grupo_sanguineo FROM tbdocente;";  
        
         $query = mysqli_query($c, $var_consulta);
         while($result = mysqli_fetch_array($query))
         {
           echo "<tr>
                 <td>
-                    ".$result["Estudiante_id"]."
+                    ".$result["Docente_id"]."
                 </td>
                 <td>
                     ".$result["primer_nombre"]."
@@ -140,17 +140,17 @@ error_reporting(E_ALL);
 
     
 
-    function ConsultarEstudiante(){
+    function ConsultarDocente(){
         $con = new MySQL();
         $c = $con->abrirConexion();
-        $var_consulta  = "SELECT Estudiante_id,primer_nombre FROM tbestudiante;";  
+        $var_consulta  = "SELECT Docente_id,primer_nombre FROM tbdocente;";  
        
         $query = mysqli_query($c, $var_consulta);
         $rows = array();
 
         while($result = mysqli_fetch_array($query))
         {
-            $rows[] =  $result['primer_nombre'].'_'.$result['Estudiante_id'];
+            $rows[] =  $result['primer_nombre'].'_'.$result['Docente_id'];
 
         }
 

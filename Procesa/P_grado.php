@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 
     if($_REQUEST['metodo'] == "save"){
 
-        if($_REQUEST['id'] != ""){
+        if($_REQUEST['TxtId'] != ""){
             actualizar();
         }else{
             guardar();
@@ -43,7 +43,7 @@ error_reporting(E_ALL);
     function eliminar(){
         $con = new MySQL();
         $c = $con->abrirConexion();        
-        $var_consulta  = "DELETE FROM tbgrado WHERE  Grado_id = '".$_POST['txtIde']."';"; 
+        $var_consulta  = "DELETE FROM tbgrado WHERE  Grado_id = ".$_POST['TxtId'].";"; 
         $c->query($var_consulta);
         $con->cerrarConexion();
         header("Location: ../Grado.php?"); 
@@ -55,7 +55,7 @@ error_reporting(E_ALL);
         $con = new MySQL();
         $c = $con->abrirConexion();
         $var_consulta  = "UPDATE tbgrado SET grado = '".$_POST['TxtGrado']."'
-        WHERE Grado_id = '".$_POST['txtId']."'";  
+        WHERE Grado_id = '".$_POST['TxtId']."'";  
         $c->query($var_consulta);
         $con->cerrarConexion();
         header("Location: ../Grado.php?"); 
@@ -87,6 +87,7 @@ error_reporting(E_ALL);
 
                 echo "</tr>";
         }
+        
         $con->cerrarConexion();
     }
 

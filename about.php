@@ -4,6 +4,13 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php
+ 
+if(isset($_GET["error"]) && $_GET["error"] != "login") {
+    header("Location: about.php");
+  }
+ 
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 				<div class="header-bottom-w3layouts">
 					<div class="main-w3ls-logo">
-						<h1><a href="index.html"><img src="images/logo.png" width="100" height="100"></span>English School</a></h1>
+						<h1><a href="index.php"><img src="images/logo.png" width="100" height="100"></span>English School</a></h1>
 					</div>
 					<!-- navigation -->
 					<nav class="navbar navbar-default">
@@ -63,18 +70,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a href="index.html">Home</a></li>
-								<li><a class="active" href="about.html">About</a></li>
-								<li><a href="courses.html">Courses</a></li>
-								<li><a href="institutes.html">English School</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										<li><a href="icons.html">Web Icons</a></li>
-										<li><a href="typography.html">Typography</a></li>
-									</ul>
-								</li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="index.php">Home</a></li>
+								<li><a class="active" href="about.php">About</a></li>
+								<li><a href="courses.php">Courses</a></li>
+								<li><a href="institutes.php">English School</a></li>								
+								<li><a href="contact.php">Contact</a></li>
 							</ul>
 
 						</div>
@@ -110,8 +110,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h5 class="main-w3l-title">About Us</h5>
 			<div class="about-top">
 				<h3 class="subheading-wthree">Something About Us</h3>
-				<p class="paragraph-agileinfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tristique est, et egestas odio. Mauris ac tristique
-					arcu, sed interdum risus.Integer quis tristique est, et egestas odio. Mauris ac tristique arcu, sed interdum risus.
+				<p class="paragraph-agileinfo">
+					Somos una plataforma llamada english school que tiene el servicio de ayudar a los jóvenes de los grados octavos en la parte de ingles
 				</p>
 			</div>
 			<div class="about-main">
@@ -124,7 +124,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 
 				<div class="about-w3ls-right">
-					<h3 class="subheading-wthree">Welcome to our English School</h3>
+					<h3 class="subheading-wthree">
+						Bienvenido a los temas de english school
+					</h3>
 					<p class="paragraph-agileinfo">We offer great variety of individual and group programs. Our clients' and our experience proves that the following courses
 						can literally change your life!</p>
 					<ul>
@@ -143,25 +145,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- about-mid -->
 	<div class="about-mid">
 		<div class="mid-info">
+			<center>
 			<h3 class="subheading-wthree white-clr">Misión</h3>
 			<p ALIGN="justify" class="paragraph-agileinfo white-clr">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed odio consequat, tristique elit sed, molestie nulla.
+				Enseñarle a los estudiantes de los grados octavos del colegio centro docente Bartolome mitre a que puedan fortalecer la materia de inglés en todos los sentidos.
 			</p>
-			
+			</center>
 		</div>
 		<div class="mid-info">
+			<center>
 			<h3 class="subheading-wthree white-clr">Visión</h3>
 			<p ALIGN="justify" class="paragraph-agileinfo white-clr">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed odio consequat, tristique elit sed, molestie nulla.
+				Para el año 2024 queremos ser la mejor plataforma educativa de ingles en cali para todas las instituciones.
 			</p>
-			
+			</center>
 		</div>
 		<div class="mid-info">
+			<center>
 			<h3 class="subheading-wthree white-clr">Objetivo</h3>
 			<p ALIGN="justify" class="paragraph-agileinfo white-clr">
 				Desarrollar una plataforma web educativa que permitirá, a los estudiantes de la institución Bartolomé Mitre afianzar sus conocimientos en el área de inglés con componentes (videos tutoriales, juegos interactivos) que hacen que los estudiantes pueda aprender divirtiéndose para que en la institución apliquen ese conocimiento que adquieren.
 				
-			</p>			
+			</p>
+			</center>			
 		</div>
 	</div>
 	<!--// about-mid -->
@@ -174,10 +180,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					arcu, sed interdum risus.Integer quis tristique est, et egestas odio.</p>
 				<p class="paragraph-agileinfo">Mauris ac tristique arcu, sed interdum risus.Integer quis tristique est, et egestas odio. Mauris ac tristique arcu, sed
 					interdum risus.</p>
-				<p class="paragraph-agileinfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tristique est, et egestas odio. Mauris ac tristique
-					arcu, sed interdum risus.Integer quis tristique est, et egestas odio.</p>
-				<p class="paragraph-agileinfo">Mauris ac tristique arcu, sed interdum risus.Integer quis tristique est, et egestas odio. Mauris ac tristique arcu, sed
-					interdum risus.</p>
+				
 			</div>
 			<div class="col-md-6 team-right">
 				<div class="col-md-6 col-sm-6 col-xs-6 team-grid">
@@ -204,30 +207,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="clearfix"> </div>
 				</div>
-				<div class="col-md-6 col-sm-6 col-xs-6 team-grid">
-					<img class="team-img img-responsive" src="images/t4.jpg" alt="">
-					<h6>Jack Bravo</h6>
-					<div class="social-icons-agileits">
-						<ul>
-							<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-							<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-							<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-						</ul>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="col-md-6 col-sm-6 col-xs-6 team-grid">
-					<img class="team-img img-responsive" src="images/t3.jpg" alt="">
-					<h6>Bernard Smith</h6>
-					<div class="social-icons-agileits">
-						<ul>
-							<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-							<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-							<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-						</ul>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -236,7 +216,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="footer-agileits-w3layouts">
 		<div class="container">
 			<div class="btm-logo-w3ls">
-				<h2><a href="index.html"><img src="images/logo.png" width="100" height="100"></span>English School</a></h2>
+				<h2><a href="index.php"><img src="images/logo.png" width="100" height="100"></span>English School</a></h2>
 			</div>
 			
 

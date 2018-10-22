@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2018 a las 06:25:55
--- Versión del servidor: 10.1.16-MariaDB
--- Versión de PHP: 7.0.9
+-- Tiempo de generación: 22-10-2018 a las 03:40:32
+-- Versión del servidor: 10.1.35-MariaDB
+-- Versión de PHP: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,6 +25,51 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `tbacudiente`
+--
+
+CREATE TABLE `tbacudiente` (
+  `Acudiente_id` int(11) NOT NULL,
+  `primer_nombre` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `segundo_nombre` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `apellido_paterno` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `apellido_materno` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `tipo_documento` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `documento_identidad` int(11) NOT NULL,
+  `email` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `grupo_sanguineo` varchar(10) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `Barrio_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Gestión de acudiente';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbdocente`
+--
+
+CREATE TABLE `tbdocente` (
+  `Docente_id` int(11) NOT NULL,
+  `primer_nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `segundo_nombre` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `apellido_paterno` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `apellido_materno` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `tipo_documento` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
+  `documento_identidad` int(11) DEFAULT NULL,
+  `email` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `grupo_sanguineo` varchar(10) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `Barrio_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Gestión de Docentes';
+
+--
+-- Volcado de datos para la tabla `tbdocente`
+--
+
+INSERT INTO `tbdocente` (`Docente_id`, `primer_nombre`, `segundo_nombre`, `apellido_paterno`, `apellido_materno`, `tipo_documento`, `documento_identidad`, `email`, `grupo_sanguineo`, `Barrio_id`) VALUES
+(1, 'Andres', '', 'Perez', '', 'Cedula', 10101045, 'perez@gmail.com', 'AB+', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `tbestudiante`
 --
 
@@ -32,6 +79,7 @@ CREATE TABLE `tbestudiante` (
   `segundo_nombre` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `apellido_paterno` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `apellido_materno` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `tipo_documento` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `documento_identidad` bigint(20) NOT NULL,
   `email` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   `Grado_id` int(11) NOT NULL,
@@ -44,8 +92,8 @@ CREATE TABLE `tbestudiante` (
 -- Volcado de datos para la tabla `tbestudiante`
 --
 
-INSERT INTO `tbestudiante` (`Estudiante_id`, `primer_nombre`, `segundo_nombre`, `apellido_paterno`, `apellido_materno`, `documento_identidad`, `email`, `Grado_id`, `Barrio_id`, `Acudiente_id`, `grupo_sanguineo`) VALUES
-(1, 'Cristian', 'Camilo', 'Bastidas', '', 1007234567, 'camilo@gmail.com', 1, 1, 1, 'A+');
+INSERT INTO `tbestudiante` (`Estudiante_id`, `primer_nombre`, `segundo_nombre`, `apellido_paterno`, `apellido_materno`, `tipo_documento`, `documento_identidad`, `email`, `Grado_id`, `Barrio_id`, `Acudiente_id`, `grupo_sanguineo`) VALUES
+(1, 'Cristian', 'Camilo', 'Bastidas', '', 'Tarjeta', 1007234567, 'camilo@gmail.com', 1, 1, 1, 'A+');
 
 -- --------------------------------------------------------
 
@@ -55,8 +103,19 @@ INSERT INTO `tbestudiante` (`Estudiante_id`, `primer_nombre`, `segundo_nombre`, 
 
 CREATE TABLE `tbgrado` (
   `Grado_id` int(11) NOT NULL,
-  `grado` int(11) DEFAULT NULL
+  `grado` varchar(10) COLLATE utf8_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Gestion de Grado';
+
+--
+-- Volcado de datos para la tabla `tbgrado`
+--
+
+INSERT INTO `tbgrado` (`Grado_id`, `grado`) VALUES
+(1, '8-2'),
+(2, '8-1'),
+(3, '8-5'),
+(4, '8-3'),
+(5, '8-4');
 
 -- --------------------------------------------------------
 
@@ -90,6 +149,14 @@ CREATE TABLE `tbrol` (
   `rol` varchar(50) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `tbrol`
+--
+
+INSERT INTO `tbrol` (`Rol_id`, `rol`) VALUES
+(1, 'administrador'),
+(2, 'Docente');
+
 -- --------------------------------------------------------
 
 --
@@ -102,8 +169,28 @@ CREATE TABLE `tbstatus` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Gestion de Status';
 
 --
+-- Volcado de datos para la tabla `tbstatus`
+--
+
+INSERT INTO `tbstatus` (`Status_id`, `status`) VALUES
+(1, 'activo'),
+(2, 'Inactivo');
+
+--
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `tbacudiente`
+--
+ALTER TABLE `tbacudiente`
+  ADD PRIMARY KEY (`Acudiente_id`);
+
+--
+-- Indices de la tabla `tbdocente`
+--
+ALTER TABLE `tbdocente`
+  ADD PRIMARY KEY (`Docente_id`);
 
 --
 -- Indices de la tabla `tbestudiante`
@@ -140,30 +227,48 @@ ALTER TABLE `tbstatus`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `tbacudiente`
+--
+ALTER TABLE `tbacudiente`
+  MODIFY `Acudiente_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `tbdocente`
+--
+ALTER TABLE `tbdocente`
+  MODIFY `Docente_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `tbestudiante`
 --
 ALTER TABLE `tbestudiante`
   MODIFY `Estudiante_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `tbgrado`
 --
 ALTER TABLE `tbgrado`
-  MODIFY `Grado_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Grado_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT de la tabla `tblogin`
 --
 ALTER TABLE `tblogin`
   MODIFY `Login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `tbrol`
 --
 ALTER TABLE `tbrol`
-  MODIFY `Rol_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Rol_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT de la tabla `tbstatus`
 --
 ALTER TABLE `tbstatus`
-  MODIFY `Status_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

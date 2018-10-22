@@ -71,18 +71,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav">
-								<li><a href="index.html">Home</a></li>
+							<ul class="nav navbar-nav">	
+							<li><a href="Principal.php">Principal</a></li>							
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Registro <b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li><a href="#">Maestros</a></li>
-										<li><a href="#">Estudiantes</a></li>
+										<li><a href="Docente.php">Docentes</a></li>										
 										<li><a href="#">Competencias</a></li>
+										<li><a href="Grado.php">Grados</a></li>
+										<li><a href="#">Barrios</a></li>
+										<li><a href="Rol.php">Rol</a></li>
+										<li><a href="Status.php">Estatus</a></li>
 									</ul>
-								</li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="courses.html">Courses</a></li>
+								</li>								
 								
 							</ul>
 
@@ -115,49 +116,66 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //banner -->
 	<!-- Institutes -->
 	<div class="gallery">
-		
-			<h5 class="main-w3l-title">Estudiantes</h5>
-			
-			<div class="container">				
+		<div class="col-md-12">	
+		<div class="panel panel-default">
+		  <div class="panel-heading"><h5 class="main-w3l-title"><center>Registrar Estudiantes</center></h5></div>
+		  	<div class="panel-body">
+    			<div class="container">	
+
 
 					<form id="FrmEstudiantes" action="Procesa/P_estudiante.php?metodo=save" method="post" style="background-color: #f5f5f5;padding: 5px; margin:20px">
 
-						<div class="card-header"><h1>Registrar Estudiante</h1></div>
-
 						<div class="form-group">
 							 <div class="row"><!--primera fila-->   							 
-							<div class="col-md-6 container">
+								<div class="col-md-6">
 
 								<div class="form-group">
-								<input type="number" name="TxtId" id="TxtId" class="form-control" placeholder="IdEstudiante" enable="false" >
+								<input type="hidden" name="TxtId" id="TxtId" class="form-control" placeholder="Id Estudiante" enable="false" >
 								</div>	
 
 								<div class="form-group">
+									<label for="Sexo">Primer Nombre</label>
 								<input type="text" name="TxtPrimer_Nombre" id="TxtPrimer_Nombre" class="form-control" placeholder="Primer Nombre" required="Campo Requerido">
 								</div>
 
 								<div class="form-group">
+									<label for="Sexo">Segundo Nombre</label>
 								<input type="text" name="TxtSegundo_Nombre" id="TxtSegundo_Nombre" class="form-control" placeholder="Segundo Nombre">
 								</div>
 
 								<div class="form-group">
+									<label for="Sexo">Apellido Paterno</label>
 								<input type="text" name="TxtApellido_Paterno" id="TxtApellido_Paterno" class="form-control" placeholder="Apellido Paterno" required="Campo Requerido">
 								</div>
 
 								<div class="form-group">
+									<label for="Sexo">Apellido Materno</label>
 								<input type="text" name="TxtApellido_Materno" id="TxtApellido_Materno" class="form-control" placeholder="Apellido Materno">
 								</div>
 
+								 <div class="form-group">
+							          <label for="Sexo">Tipo de Documento</label>
+							          <select class="form-control" id="ddlTipo_de_Documento" name="ddlTipo_de_Documento">
+							            <option value="select">Seleccione...</option>
+							            <option value="Cedula">Cedula de Ciudadania</option>
+							            <option value="Tarjeta">Targeta de Identidad</option> 
+							            <option value="Rgistro">Registro Civil</option> 
+							                      
+							          </select>
+							     </div>
+
+
 								<div class="form-group">
+									<label for="Sexo">Identificación</label>
 								<input type="number" name="TxtIdentificacion" id="TxtIdentificacion" class="form-control" maxlength="10" minlength="8" placeholder="Identificación">
 								</div>
 							</div>
 							
 
 							   							 
-							<div class="col-md-6 container">	
-
+							<div class="col-md-6">	
 								<div class="form-group">
+									<label for="Sexo">E-mail</label>
 								<input type="email" name="TxtEmail" id="TxtEmail" class="form-control" placeholder="E-mail">
 								</div>
 
@@ -193,40 +211,61 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 								
 							</div>
-						</div>	<!--fin segunda fila-->						
+						</div>	<!--fin primera fila-->						
 					</div>
 						
  					<input type="submit" class="btn btn-primary btn-block" value="Guardar"></input>
-
+					
 					</form>
 				
-				
+				</div>
 			</div>
 			
-			<div class="clearfix"></div>
+				
 		</div>
+  		</div>
+		
+		
+		<div class="col-md-12">	
+			<div class="panel panel-default">
+			  <div class="panel-heading"><h5 class="main-w3l-title"><center>Registros de Estudiantes</center></h5></div>
+			  	<div class="panel-body">
+	    			<div class="container">	
+	    				<table class="table table-striped table-bordered table-responsive">
+				          <thead>
+				            <tr>
+				              <th scope="col">#</th>
+				              <th scope="col"><center>Primer Nomre</center></th>
+				              <th scope="col"><center>Segundo Nombre</center></th>
+				              <th scope="col"><center>Apellido Paterno</center></th>
+				              <th scope="col"><center>Apellido Materno</center></th>
+				              <th scope="col"><center>Tipo de Documento</center></th>
+				              <th scope="col"><center>Identificación</center></th>
+				              <th scope="col"><center>E-mail</center></th>
+				              <th scope="col"><center>Grupo Sanguineo</center></th>
+				              <th scope="col"><center>Editar</center></th>
+				              <th scope="col"><center>Eliminar</center></th>				                           
+				            </tr>
+				          </thead>
+				         <tbody id="t_estudiante" class="table table-responsive" >
+         				 </tbody>
+      					</table>
+	    			</div>
+	    		</div>
+	    	</div>
+    	</div>
+
+
+			
+			
 		 <div class="row">
-      <div class="col-sm-10 container">
-        <table class="table table-striped table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Primer Nomre</th>
-              <th scope="col">Segundo Nombre</th>
-              <th scope="col">Apellido Paterno</th>
-              <th scope="col">Apellido Materno</th>
-              <th scope="col">Identificación</th>
-              <th scope="col">E-mail</th>
-              <th scope="col">Grupo Sanguineo</th>
-              <th scope="col">Editar</th>
-              <th scope="col">Eliminar</th>
-                           
-            </tr>
-          </thead>
-          <tbody id="t_estudiante" >
-          </tbody>
-      </table>
+		 	
+      <div class="col-sm-12">
+      
+        
+  
     </div>
+   			 
   </div>
 	
 	<!--// Institutes -->
@@ -314,6 +353,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       $("#TxtSegundo_Nombre").val(dato.segundo_nombre);
       $("#TxtApellido_Paterno").val(dato.apellido_paterno);
       $("#TxtApellido_Materno").val(dato.apellido_materno);
+      $("#ddlTipo_de_Documento").val(dato.tipo_documento);
       $("#TxtIdentificacion").val(dato.documento_identidad);
       $("#TxtEmail").val(dato.email);
       $("#ddlTipo_de_Sangre").val(dato.grupo_sanguineo); 
@@ -342,7 +382,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     {          
 
             $.ajax({
-              type : "POST",
+              type : "get",
               url : "Procesa/P_estudiante.php?metodo=eliminar",
               data : { 
                                                    

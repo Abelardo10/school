@@ -4,6 +4,13 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php
+ 
+if(isset($_GET["error"]) && $_GET["error"] != "login") {
+    header("Location: contact.php");
+  }
+ 
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 				<div class="header-bottom-w3layouts">
 					<div class="main-w3ls-logo">
-						<h1><a href="index.html"><img src="images/logo.png" width="100" height="100"></span>English School</a></h1>
+						<h1><a href="index.php"><img src="images/logo.png" width="100" height="100"></span>English School</a></h1>
 					</div>
 					<!-- navigation -->
 					<nav class="navbar navbar-default">
@@ -64,18 +71,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="courses.html">Courses</a></li>
-								<li><a href="institutes.html">English School</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										<li><a href="icons.html">Web Icons</a></li>
-										<li><a href="typography.html">Typography</a></li>
-									</ul>
-								</li>
-								<li><a class="active" href="contact.html">Contact</a></li>
+								<li><a href="index.php">Home</a></li>
+								<li><a href="about.php">About</a></li>
+								<li><a href="courses.php">Courses</a></li>
+								<li><a href="institutes.php">English School</a></li>								
+								<li><a class="active" href="contact.php">Contact</a></li>
 							</ul>
 
 						</div>
@@ -199,7 +199,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="footer-agileits-w3layouts">
 		<div class="container">
 			<div class="btm-logo-w3ls">
-				<h2><a href="index.html"><img src="images/logo.png" width="100" height="100"></span>English School</a></h2>
+				<h2><a href="index.php"><img src="images/logo.png" width="100" height="100"></span>English School</a></h2>
 			</div>
 			
 

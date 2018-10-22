@@ -66,17 +66,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
 								<li><a class="active" href="index.php">Home</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="courses.html">Courses</a></li>
-								<li><a href="institutes.html">English School</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										<li><a href="icons.html">Web Icons</a></li>
-										<li><a href="typography.html">Typography</a></li>
-									</ul>
-								</li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="about.php">About</a></li>
+								<li><a href="courses.php">Courses</a></li>
+								<li><a href="institutes.php">English School</a></li>								
+								<li><a href="contact.php">Contact</a></li>
 							</ul>
 
 						</div>
@@ -111,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="slider-info">
 								<h3>It is never too late to Study</h3>
 								<p>Education Needs Complete Solution</p>
-								<a href="about.html">About Us</a>
+								<a href="about.php">About Us</a>
 							</div>
 						</li>
 						<li>
@@ -119,7 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="slider-info">
 								<h3>The best learning English School</h3>
 								<p>Successful career starts with good training</p>
-								<a href="about.html">About Us</a>
+								<a href="about.php">About Us</a>
 							</div>
 						</li>
 
@@ -137,8 +130,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h5 class="main-w3l-title">About Us</h5>
 			<div class="about-top">
 				<h3 class="subheading-wthree">Something About Us</h3>
-				<p class="paragraph-agileinfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tristique est, et egestas odio. Mauris ac tristique
-					arcu, sed interdum risus.Integer quis tristique est, et egestas odio. Mauris ac tristique arcu, sed interdum risus.
+				<p class="paragraph-agileinfo">
+					Somos una plataforma llamada english school que tiene el servicio de ayudar a los jóvenes de los grados octavos en la parte de ingles
 				</p>
 			</div>
 			<div class="about-main">
@@ -151,7 +144,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 
 				<div class="about-w3ls-right">
-					<h3 class="subheading-wthree">Welcome to our English School</h3>
+					<h3 class="subheading-wthree">Bienvenido a los temas de english school</h3>
 					<p class="paragraph-agileinfo">We offer great variety of individual and group programs. Our clients' and our experience proves that the following courses
 						can literally change your life!</p>
 					<ul>
@@ -275,71 +268,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!-- //services -->
-	<!-- Modal3 -->
-	<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-
-					<div class="signin-form profile">
-						<h3 class="register-title">Register</h3>
-						<div class="login-form">
-							<form action="#" method="post">
-								<div class="fields-main">
-									<div class="fields">
-										<input type="text" name="name" placeholder="Username" required="">
-									</div>
-									<div class="fields">
-										<input type="email" name="email" placeholder="Email" required="">
-									</div>
-								</div>
-								<div class="fields-main">
-									<div class="fields">
-										<input type="text" name="Number" placeholder="Number" required="">
-									</div>
-									<div class="fields">
-										<input type="text" name="Address" placeholder="Address" required="">
-									</div>
-								</div>
-								<div class="fields-main">
-									<div class="fields">
-										<input type="text" name="Last/Current educational status" placeholder="Last/Current educational status" required="">
-									</div>
-									<div class="fields">
-										<input type="text" name="Website" placeholder="Website(if any)" required="">
-									</div>
-								</div>
-								<div class="fields">
-									<select id="country" onchange="change_country(this.value)" class="frm-field required sect">
-										<option value="">Select course</option>
-										<option value="">Office</option>
-										<option value="">Web design</option>
-										<option value="">Web development</option>
-										<option value="">Net working</option>
-										<option value="">Linux</option>
-									</select>
-								</div>
-								<div class="fields">
-									<select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-										<option value="">Class time</option>
-										<option value="">Morning</option>
-										<option value="">Evening</option>
-										<option value="">Custom</option>
-									</select>
-								</div>
-								
-								<input type="submit" value="Submit">
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- //Modal3 -->
+	
 	<!-- Testimonials -->
 	<div class="testimonials-section">
 		<div class="container">
@@ -430,7 +359,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="footer-agileits-w3layouts">
 		<div class="container">
 			<div class="btm-logo-w3ls">
-				<h2><a href="index.html"><img src="images/logo.png" width="100" height="100"></span>English School</a></h2>
+				<h2><a href="index.php"><img src="images/logo.png" width="100" height="100"></span>English School</a></h2>
 			</div>
 			
 

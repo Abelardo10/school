@@ -4,6 +4,15 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php
+ 
+if(isset($_GET["error"]) && $_GET["error"] != "login") {
+    header("Location: Principal.php");
+
+  }
+ 
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,13 +72,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav">
-								<li><a href="index.html">Home</a></li>
+							<ul class="nav navbar-nav">	
+							<li><a href="Principal.php">Principal</a></li>							
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Registro <b class="caret"></b></a>
 									<ul class="dropdown-menu">
 
-										<li><a href="#">Docentes</a></li>
+										<li><a href="Docente.php">Docentes</a></li>
 										<li><a href="Estudiantes.php">Estudiantes</a></li>
 										<li><a href="#">Competencias</a></li>
 										<li><a href="Grado.php">Grados</a></li>
@@ -77,9 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li><a href="Rol.php">Rol</a></li>
 										<li><a href="Status.php">Estatus</a></li>
 									</ul>
-								</li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="courses.html">Courses</a></li>
+								</li>							
 								
 							</ul>
 
@@ -113,7 +120,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- Institutes -->
 	<div class="gallery">
 		<div class="container">
-			<h5 class="main-w3l-title">Administrador</h5>
+			<h5 class="main-w3l-title">
+			Bienvenido <?php echo $_SESSION["usuarioactual"]; ?>
+			</h5>
 			
 			Informacion de admin
 			
@@ -126,7 +135,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="footer-agileits-w3layouts">
 		<div class="container">
 			<div class="btm-logo-w3ls">
-				<h2><a href="index.html"><img src="images/logo.png" width="100" height="100"></span>English School</a></h2>
+				<h2><a href="index.php"><img src="images/logo.png" width="100" height="100"></span>English School</a></h2>
 			</div>
 			
 

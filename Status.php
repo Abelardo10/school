@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <?php
  
 if(isset($_GET["error"]) && $_GET["error"] != "login") {
-    header("Location: Rol.php");
+    header("Location: Status.php");
   }
  
  ?>
@@ -71,18 +71,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav">
-								<li><a href="index.html">Home</a></li>
+							<ul class="nav navbar-nav">		
+							<li><a href="Principal.php">Principal</a></li>						
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Registro <b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li><a href="#">Maestros</a></li>
-										<li><a href="#">Estudiantes</a></li>
+										<li><a href="Docente.php">Docentes</a></li>
+										<li><a href="Estudiantes.php">Estudiantes</a></li>
 										<li><a href="#">Competencias</a></li>
+										<li><a href="Grado.php">Grados</a></li>
+										<li><a href="#">Barrios</a></li>
+										<li><a href="Rol.php">Rol</a></li>										
 									</ul>
-								</li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="courses.html">Courses</a></li>
+								</li>								
 								
 							</ul>
 
@@ -129,7 +130,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="col-md-6 container">
 
 								<div class="form-group">
-								<input type="number" name="TxtId" id="TxtId" class="form-control" placeholder="Idrol" enable="false" >
+								<input type="hidden" name="TxtId" id="TxtId" class="form-control" placeholder="Idrol" enable="false" >
+								</div>
+								<div class="form-group">
+								<input type="hidden" name="Id" id="Id" class="form-control" placeholder="Idrol" enable="false" >
 								</div>	
 
 								<div class="form-group">
@@ -244,7 +248,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
 
     function editar(dato){
-      $("#TxtId").val(dato.Status_id);      
+      $("#TxtId").val(dato.Status_id);
+      $("#Id").val(dato.Status_id);      
       $("#TxtStatus").val(dato.status);
     }
 
@@ -273,8 +278,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                         
               },
               success : function( data ){
-              $('#t_status').html(data);
-
+              $('#t_status').html(data);              
               }
              
             });         

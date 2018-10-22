@@ -64,8 +64,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <a href="#">Forgot Password?</a>
                 <p><input type="checkbox">Remember Me</p>
             </div>
-            <input type="submit" name="btn_Login" id="btn_Login" value="Login" />
-        
+            
+            <button pe="submit" name="btn_Login" id="btn_Login"  class="btn btn-primary btn-lg btn-block">Login</button>        
 
             
         </form>

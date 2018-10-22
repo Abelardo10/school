@@ -2,11 +2,14 @@
 
  include("../conexion.php");
 session_start();
+
+//variables globales
 $userok;
 $passok;
 
 
      if(isset($_POST["btn_Login"])) {
+      // trim es para eliminar los espacios que hay a la izquierda y la derecha de la caja de texto
  
                $loginNombre = trim($_POST["txtUsuario"]);
                $loginPassword = trim($_POST["txtPassword"]);

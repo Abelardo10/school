@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 
     if($_REQUEST['metodo'] == "save"){
 
-        if($_REQUEST['id'] != ""){
+        if($_REQUEST['TxtId'] != ""){
             actualizar();
         }else{
             guardar();
@@ -24,7 +24,14 @@ error_reporting(E_ALL);
     }
     if($_REQUEST['metodo'] == "eliminar"){
 
+        if($_REQUEST['Id'] != ""){
+
         eliminar();
+    }
+    else
+    {
+        echo "Registro no eliminado";
+    }
     }
  
      
@@ -42,7 +49,7 @@ error_reporting(E_ALL);
     function eliminar(){
         $con = new MySQL();
         $c = $con->abrirConexion();        
-        $var_consulta  = "DELETE FROM tbstatus WHERE  Status_id = ".$_POST['TxtId'].";"; 
+        $var_consulta  = "DELETE FROM tbstatus WHERE  Status_id = ".$_POST['Id'].";"; 
         $c->query($var_consulta);
         $con->cerrarConexion();
         header("Location: ../Status.php?"); 
