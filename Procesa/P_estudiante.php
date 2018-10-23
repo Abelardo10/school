@@ -59,7 +59,7 @@ error_reporting(E_ALL);
     function eliminar(){
         $con = new MySQL();
         $c = $con->abrirConexion();        
-        $var_consulta  = "DELETE FROM tbestudiante WHERE  Estudiante_id == ".$_POST['TxtId'].";"; 
+        $var_consulta  = "DELETE FROM tbestudiante WHERE  Estudiante_id = ".$_REQUEST['id'].";"; 
         $c->query($var_consulta);        
         $con->cerrarConexion();
         header("Location: ../Estudiantes.php?"); 
@@ -126,11 +126,11 @@ error_reporting(E_ALL);
 
                 ";
                 
-                 echo"<td>  <button class='btn btn-primary'  onclick='editar(".json_encode($result).")'>Editar </button> </td>";
-                     echo"<td>  <button class='btn btn-primary'  onclick='eliminar(".json_encode($result).")'>Eliminar </button> </td>";
+                 
 
                 if($_SESSION["rol"] === $_SESSION["tipou"]){                   
-
+echo"<td>  <button class='btn btn-primary'  onclick='editar(".json_encode($result).")'>Editar </button> </td>";
+                     echo"<td>  <button class='btn btn-primary'  onclick='eliminar(".json_encode($result).")'>Eliminar </button> </td>";
                 }
 
                 echo "</tr>";

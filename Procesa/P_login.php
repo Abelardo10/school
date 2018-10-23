@@ -6,6 +6,7 @@ session_start();
 //variables globales
 $userok;
 $passok;
+$rol;
 
 
      if(isset($_POST["btn_Login"])) {
@@ -29,7 +30,7 @@ $passok;
  
                          $userok = $row["usuario"];
                          $passok = $row["password"];
-                        // $_SESSION["Rol_id"]=$row["Rol"];
+                         $rol["Rol_id"]=$row["Rol"];
 
                     }
  
@@ -38,15 +39,14 @@ $passok;
  
                     if($loginNombre == $userok && $loginPassword == $passok) {
  
-                         //session_start();
-                         $_SESSION["logueado"] = TRUE;
-                          $_SESSION["autentica"] = "SIP";
-                          $_SESSION["usuarioactual"] = $userok; //nombre del usuario logueado.
+                         session_start();                                                  
+                          $_SESSION["user_session"] = $loginNombre; //nombre del usuario logueado.
                          header("Location: ../Principal.php");
  
                     }
                     else {
-                          
+
+                          echo "email or password does not exist."; // wrong details 
                          Header("Location: /Login/Login.php?error=login");
 
                     }

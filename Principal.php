@@ -5,13 +5,14 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <?php
- 
-if(isset($_GET["error"]) && $_GET["error"] != "login") {
-    header("Location: Principal.php");
+session_start();
 
-  }
- 
- ?>
+if(!isset($_SESSION['user_session']))
+{
+	header("Location: ../index.php");
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +33,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			window.scrollTo(0, 1);
 		}
 	</script>
+	 <script language="javascript">
+    function NoBack(){
+        history.go(0);      
+    }
+</script>
 	<!-- //Meta Tags -->
 	<!-- Style-sheets -->
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -80,15 +86,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 										<li><a href="Docente.php">Docentes</a></li>
 										<li><a href="Estudiantes.php">Estudiantes</a></li>
+										<li><a href="Acudiente.php">Acudiente</a></li>
 										<li><a href="#">Competencias</a></li>
 										<li><a href="Grado.php">Grados</a></li>
-										<li><a href="#">Barrios</a></li>
+										<li><a href="Barrio.php">Barrios</a></li>
 										<li><a href="Rol.php">Rol</a></li>
 										<li><a href="Status.php">Estatus</a></li>
 									</ul>
-								</li>							
+								</li>
+								<li class="dropdown">
+				                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+				                    </a>
+				                    <ul class="dropdown-menu dropdown-user">				                       
+				                        <li><a href="Salir.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar secion</a>
+				                        </li>
+				                    </ul>
+                    					<!-- /.dropdown-user -->
+               				 	</li>							
 								
 							</ul>
+
+							
 
 						</div>
 						<!-- /.navbar-collapse -->
@@ -121,7 +140,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="gallery">
 		<div class="container">
 			<h5 class="main-w3l-title">
-			Bienvenido <?php echo $_SESSION["usuarioactual"]; ?>
+			Bienvenido <?php echo $_SESSION["user_session"]; ?>
 			</h5>
 			
 			Informacion de admin

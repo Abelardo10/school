@@ -22,9 +22,7 @@ error_reporting(E_ALL);
     }else{
         listar();
     }
-    if($_REQUEST['metodo'] == "eliminar"){
-
-        if($_REQUEST['Id'] != ""){
+    if($_REQUEST['metodo'] == "eliminar"){       
 
         eliminar();
     }
@@ -32,7 +30,7 @@ error_reporting(E_ALL);
     {
         echo "Registro no eliminado";
     }
-    }
+    
  
      
     function guardar(){

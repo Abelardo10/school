@@ -5,12 +5,14 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <?php
- 
-if(isset($_GET["error"]) && $_GET["error"] != "login") {
-    header("Location: Estudiantes.php");
-  }
- 
- ?>
+session_start();
+
+if(!isset($_SESSION['user_session']))
+{
+	header("Location: index.php");
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -76,15 +78,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Registro <b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li><a href="Docente.php">Docentes</a></li>										
+										<li><a href="Docente.php">Docentes</a></li>	
+										<li><a href="Acudiente.php">Acudiente</a></li>									
 										<li><a href="#">Competencias</a></li>
 										<li><a href="Grado.php">Grados</a></li>
-										<li><a href="#">Barrios</a></li>
+										<li><a href="Barrio.php">Barrios</a></li>
 										<li><a href="Rol.php">Rol</a></li>
 										<li><a href="Status.php">Estatus</a></li>
 									</ul>
 								</li>								
-								
+								<li class="dropdown">
+				                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+				                    </a>
+				                    <ul class="dropdown-menu dropdown-user">				                       
+				                        <li><a href="Salir.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar secion</a>
+				                        </li>
+				                    </ul>
+                    					<!-- /.dropdown-user -->
+               				 	</li>	
 							</ul>
 
 						</div>
@@ -129,11 +141,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							 <div class="row"><!--primera fila-->   							 
 								<div class="col-md-6">
 
-								<div class="form-group">
+								
 								<input type="hidden" name="TxtId" id="TxtId" class="form-control" placeholder="Id Estudiante" enable="false" >
-								</div>	
+									
 
-								<div class="form-group">
+								<div class="form-group" style="margin-top: 2em">
 									<label for="Sexo">Primer Nombre</label>
 								<input type="text" name="TxtPrimer_Nombre" id="TxtPrimer_Nombre" class="form-control" placeholder="Primer Nombre" required="Campo Requerido">
 								</div>
@@ -174,7 +186,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							   							 
 							<div class="col-md-6">	
-								<div class="form-group">
+								<div class="form-group" style="margin-top: 2em">
 									<label for="Sexo">E-mail</label>
 								<input type="email" name="TxtEmail" id="TxtEmail" class="form-control" placeholder="E-mail">
 								</div>
@@ -347,8 +359,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
 
     function editar(dato){
-      $("#TxtId").val(dato.Estudiante_id);
-      $("#id").val(dato.Estudiante_id);
+      $("#TxtId").val(dato.Estudiante_id);      
       $("#TxtPrimer_Nombre").val(dato.primer_nombre);
       $("#TxtSegundo_Nombre").val(dato.segundo_nombre);
       $("#TxtApellido_Paterno").val(dato.apellido_paterno);
@@ -380,11 +391,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     function eliminar()
     {          
+    	var id = $("#TxtId").val();
 
             $.ajax({
               type : "get",
               url : "Procesa/P_estudiante.php?metodo=eliminar",
-              data : { 
+              data : { id
                                                    
               },
               success : function( data ){

@@ -59,7 +59,7 @@ error_reporting(E_ALL);
     function eliminar(){
         $con = new MySQL();
         $c = $con->abrirConexion();        
-        $var_consulta  = "DELETE FROM tbdocente WHERE  Docente_id == ".$_POST['TxtId'].";"; 
+        $var_consulta  = "DELETE FROM tbdocente WHERE  Docente_id = ".$_REQUEST['id'].";"; 
         $c->query($var_consulta);        
         $con->cerrarConexion();
         header("Location: ../Docente.php?"); 

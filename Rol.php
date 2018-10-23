@@ -5,12 +5,14 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <?php
- 
-if(isset($_GET["error"]) && $_GET["error"] != "login") {
-    header("Location: Rol.php");
-  }
- 
- ?>
+session_start();
+
+if(!isset($_SESSION['user_session']))
+{
+	header("Location: index.php");
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,13 +80,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<ul class="dropdown-menu">
 										<li><a href="Docente.php">Docentes</a></li>
 										<li><a href="Estudiantes.php">Estudiantes</a></li>
+										<li><a href="Acudiente.php">Acudiente</a></li>
 										<li><a href="#">Competencias</a></li>
 										<li><a href="Grado.php">Grados</a></li>
-										<li><a href="#">Barrios</a></li>										
+										<li><a href="Barrio.php">Barrios</a></li>										
 										<li><a href="Status.php">Estatus</a></li>
 									</ul>
 								</li>
-								
+								<li class="dropdown">
+				                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+				                    </a>
+				                    <ul class="dropdown-menu dropdown-user">				                       
+				                        <li><a href="Salir.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar secion</a>
+				                        </li>
+				                    </ul>
+                    					<!-- /.dropdown-user -->
+               				 	</li>	
 								
 							</ul>
 
@@ -130,11 +142,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							 <div class="row"><!--primera fila-->   							 
 							<div class="col-md-6 container">
 
-								<div class="form-group">
-								<input type="number" name="TxtId" id="TxtId" class="form-control" placeholder="Idrol" enable="false" >
-								</div>	
+								
+								<input type="hidden" name="TxtId" id="TxtId" class="form-control" placeholder="Idrol" enable="false" >
+									
 
-								<div class="form-group">
+								<div class="form-group" style="margin-top: 2em">
 								<input type="text" name="TxtRol" id="TxtRol" class="form-control" placeholder="Descripción" required="Campo Requerido">
 								</div>								
 							</div>  							 
@@ -267,12 +279,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     function eliminar()
     {          
-
+var id = $("#TxtId").val();
             $.ajax({
               type : "POST",
               url : "Procesa/P_rol.php?metodo=eliminar",
               data : { 
-                                                        
+                       id                                 
               },
               success : function( data ){
               $('#t_rol').html(data);

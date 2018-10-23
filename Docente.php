@@ -5,12 +5,41 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <?php
- 
-if(isset($_GET["error"]) && $_GET["error"] != "login") {
-    header("Location: Estudiantes.php");
-  }
- 
- ?>
+session_start();
+
+if(!isset($_SESSION['user_session']))
+{
+	header("Location: index.php");
+}
+	include('conexion.php');
+	 $con = new MySQL();
+			 $c = $con->abrirConexion();
+		    
+				 
+				if ($c->connect_error) //verificamos si hubo un error al conectar, recuerden que pusimos el @ para evitarlo
+				{
+				    die('Error de conexión: ' . $c->connect_error); //si hay un error termina la aplicación y mostramos el error
+				}
+				 
+				$sql="SELECT * from tbbarrio";
+				$result = $c->query($sql); //usamos la conexion para dar un resultado a la variable
+				 
+				if ($result->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
+				{
+				    $combobit="";
+				    while ($row = $result->fetch_array(MYSQLI_ASSOC)) 
+				    {
+				        $combobit .=" <option value='".$row['Barrio_id']."'>".$row['barrio']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
+				    }
+				}
+				else
+				{
+				    echo "No hubo resultados";
+				}
+				$c->close(); //cerramos la conexión
+
+?>
+	
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,14 +107,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<ul class="dropdown-menu">
 									
 										<li><a href="Estudiantes.php">Estudiantes</a></li>
+										<li><a href="Acudiente.php">Acudiente</a></li>
 										<li><a href="#">Competencias</a></li>
 										<li><a href="Grado.php">Grados</a></li>
-										<li><a href="#">Barrios</a></li>
+										<li><a href="Barrio.php">Barrios</a></li>
 										<li><a href="Rol.php">Rol</a></li>
 										<li><a href="Status.php">Estatus</a></li>
 									</ul>
 								</li>								
-								
+								<li class="dropdown">
+				                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+				                    </a>
+				                    <ul class="dropdown-menu dropdown-user">				                       
+				                        <li><a href="Salir.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar secion</a>
+				                        </li>
+				                    </ul>
+                    					<!-- /.dropdown-user -->
+               				 	</li>	
 							</ul>
 
 						</div>
@@ -130,11 +169,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							 <div class="row"><!--primera fila-->   							 
 								<div class="col-md-6">
 
-								<div class="form-group">
 								<input type="hidden" name="TxtId" id="TxtId" class="form-control" placeholder="Id Estudiante" enable="false" >
-								</div>	
+								
 
-								<div class="form-group">
+								<div class="form-group" style="margin-top: 2em">
 									<label for="Sexo">Primer Nombre</label>
 								<input type="text" name="TxtPrimer_Nombre" id="TxtPrimer_Nombre" class="form-control" placeholder="Primer Nombre" required="Campo Requerido">
 								</div>
@@ -175,7 +213,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							   							 
 							<div class="col-md-6">	
-								<div class="form-group">
+								<div class="form-group" style="margin-top: 2em">
 									<label for="Sexo">E-mail</label>
 								<input type="email" name="TxtEmail" id="TxtEmail" class="form-control" placeholder="E-mail">
 								</div>
@@ -193,13 +231,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							            <option value="AB-">AB-</option>            
 							          </select>
 							     </div>
-								
-
+					
 								<div class="form-group">
-							          <label for="Sexo">Barrio</label>
+							          <label for="Barrio">Barrio</label>
 							          <select class="form-control" id="ddlBarrio" name="ddlBarrio">
-							            <option value="select">Seleccione...</option>
-							                       
+							            <option value="0">Seleccione...</option>
+							                       <?php echo $combobit; ?>
 							          </select>
 							     </div>
 
@@ -341,8 +378,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
 
     function editar(dato){
-      $("#TxtId").val(dato.Docente_id);
-      $("#id").val(dato.Estudiante_id);
+      $("#TxtId").val(dato.Docente_id);      
       $("#TxtPrimer_Nombre").val(dato.primer_nombre);
       $("#TxtSegundo_Nombre").val(dato.segundo_nombre);
       $("#TxtApellido_Paterno").val(dato.apellido_paterno);
@@ -373,11 +409,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     function eliminar()
     {          
-
+var id = $("#TxtId").val();
             $.ajax({
               type : "get",
               url : "Procesa/P_docente.php?metodo=eliminar",
-              data : { 
+              data : { id
                                                    
               },
               success : function( data ){

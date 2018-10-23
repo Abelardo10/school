@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 
     if($_REQUEST['metodo'] == "save"){
 
-        if($_REQUEST['id'] != ""){
+        if($_REQUEST['TxtId'] != ""){
             actualizar();
         }else{
             guardar();
@@ -42,7 +42,7 @@ error_reporting(E_ALL);
     function eliminar(){
         $con = new MySQL();
         $c = $con->abrirConexion();        
-        $var_consulta  = "DELETE FROM tbrol WHERE  Rol_id = ".$_POST['TxtId'].";"; 
+        $var_consulta  = "DELETE FROM tbrol WHERE  Rol_id = ".$_POST['id'].";"; 
         $c->query($var_consulta);
         $con->cerrarConexion();
         header("Location: ../Rol.php?"); 
