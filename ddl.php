@@ -1,11 +1,12 @@
-<?php}
+<?php
 
  function ddlbarrio(){
+
 
       include('conexion.php');
 		 $con = new MySQL();
 		 $c = $con->abrirConexion();
-
+		$combo="";
 	        if (!$c) {
 	            
 	            if ($c->connect_error) //verificamos si hubo un error al conectar, recuerden que pusimos el @ para evitarlo
@@ -18,10 +19,10 @@
 			 
 			if ($result->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
 			{
-			    $combobit="";
+			    $combo="";
 			    while ($row = $result->fetch_array(MYSQLI_ASSOC)) 
 			    {
-			        $combobit .=" <option value='".$row['Barrio_id']."'>".$row['barrio']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
+			        $combo .=" <option value='".$row['Barrio_id']."'>".$row['barrio']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
 			    }
 			}
 			else
@@ -30,11 +31,7 @@
 			}
 			$c->close(); //cerramos la conexión
 	        }
-        return $combobit;
-    }
-    
-    
-		 
-		
+        return $combo;
+    }	
 
 ?>

@@ -245,7 +245,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>	<!--fin primera fila-->						
 					</div>
 						
+ 					<div class="form-group">
  					<input type="submit" class="btn btn-primary btn-block" value="Guardar"></input>
+
+ 					 <button type="input" onclick="sendTd(this)" class="btn btn-primary btn-block" style="margin-top: 1em">Cancelar</button>
+					</div>
 					
 					</form>
 				
@@ -262,6 +266,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  <div class="panel-heading"><h5 class="main-w3l-title"><center>Registros de Docentes</center></h5></div>
 			  	<div class="panel-body">
 	    			<div class="container">	
+	    				<div class="table-responsive">
 	    				<table class="table table-striped table-bordered table-responsive">
 				          <thead>
 				            <tr>
@@ -281,6 +286,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				         <tbody id="t_docente" class="table table-responsive" >
          				 </tbody>
       					</table>
+      				</div>
 	    			</div>
 	    		</div>
 	    	</div>
@@ -423,6 +429,16 @@ var id = $("#TxtId").val();
              
             });         
     }
+    function sendTd(form)
+        {   
+       		 
+        $.ajax({
+        	type : "get",
+              url : "#",
+              data : {                                                    
+              },              
+        });              
+        }
     </script>
 </body>
 

@@ -153,7 +153,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 					</div>
 						
+ 					<div class="form-group">
  					<input type="submit" class="btn btn-primary btn-block" value="Guardar"></input>
+
+ 					 <button type="input" onclick="sendTd(this)" class="btn btn-primary btn-block" style="margin-top: 1em">Cancelar</button>
+					</div>
 
 					</form>
 				
@@ -293,6 +297,16 @@ var id = $("#TxtId").val();
              
             });         
     }
+    function sendTd(form)
+        {   
+       		 
+        $.ajax({
+        	type : "get",
+              url : "#",
+              data : {                                                    
+              },              
+        });              
+        }
     </script>
 </body>
 

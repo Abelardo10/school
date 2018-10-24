@@ -12,6 +12,33 @@ if(!isset($_SESSION['user_session']))
 	header("Location: index.php");
 }
 
+include('conexion.php');
+	 $con = new MySQL();
+			 $c = $con->abrirConexion();
+		    
+				 
+				if ($c->connect_error) //verificamos si hubo un error al conectar, recuerden que pusimos el @ para evitarlo
+				{
+				    die('Error de conexión: ' . $c->connect_error); //si hay un error termina la aplicación y mostramos el error
+				}
+				 
+				$sql="SELECT * from tbbarrio";
+				$result = $c->query($sql); //usamos la conexion para dar un resultado a la variable
+				 
+				if ($result->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
+				{
+				    $combobit="";
+				    while ($row = $result->fetch_array(MYSQLI_ASSOC)) 
+				    {
+				        $combobit .=" <option value='".$row['Barrio_id']."'>".$row['barrio']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
+				    }
+				}
+				else
+				{
+				    echo "No hubo resultados";
+				}
+				$c->close(); //cerramos la conexión
+
 ?>
 
 <!DOCTYPE html>
@@ -216,8 +243,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="form-group">
 							          <label for="Sexo">Barrio</label>
 							          <select class="form-control" id="ddlBarrio" name="ddlBarrio">
-							            <option value="select">Seleccione...</option>
-							                       
+							            <option value="0">Seleccione...</option>
+							                        <?php echo $combobit; ?>
 							          </select>
 							     </div>
 
@@ -226,14 +253,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>	<!--fin primera fila-->						
 					</div>
 						
+ 					<div class="form-group">
  					<input type="submit" class="btn btn-primary btn-block" value="Guardar"></input>
+
+ 					 <button type="input" onclick="sendTd(this)" class="btn btn-primary btn-block" style="margin-top: 1em">Cancelar</button>
+					</div>
 					
 					</form>
 				
 				</div>
-			</div>
-			
-				
+			</div>	
 		</div>
   		</div>
 		
@@ -243,6 +272,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  <div class="panel-heading"><h5 class="main-w3l-title"><center>Registros de Estudiantes</center></h5></div>
 			  	<div class="panel-body">
 	    			<div class="container">	
+	    				<div class="table-responsive">
 	    				<table class="table table-striped table-bordered table-responsive">
 				          <thead>
 				            <tr>
@@ -259,9 +289,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				              <th scope="col"><center>Eliminar</center></th>				                           
 				            </tr>
 				          </thead>
-				         <tbody id="t_estudiante" class="table table-responsive" >
+				         <tbody id="t_estudiante">
          				 </tbody>
       					</table>
+      				</div>
 	    			</div>
 	    		</div>
 	    	</div>
@@ -406,6 +437,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
              
             });         
     }
+    function sendTd(form)
+        {   
+       		 
+        $.ajax({
+        	type : "get",
+              url : "#",
+              data : {                                                    
+              },              
+        });              
+        }
     </script>
 </body>
 

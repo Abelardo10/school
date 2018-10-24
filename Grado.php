@@ -126,61 +126,76 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- //banner -->
 	<!-- Institutes -->
+
 	<div class="gallery">
-		
-			<h5 class="main-w3l-title">Grado</h5>
-			
-			<div class="container">				
-
-					<form id="FrmGrado" action="Procesa/P_grado.php?metodo=save" method="post" style="background-color: #f5f5f5;padding: 5px; margin:20px">
-
-						<div class="card-header"><h1>Registrar Grado</h1></div>
-
-						<div class="form-group">
-							 <div class="row"><!--primera fila-->   							 
-							<div class="col-md-6 container">
-
-								
-								<input type="hidden" name="TxtId" id="TxtId" class="form-control" placeholder="IdGrado" enable="false" >
+		<div class="col-md-3"></div>
+		<div class="col-md-6">	
+		<div class="panel panel-default">
+		  <div class="panel-heading"><h5 class="main-w3l-title"><center>Registrar Grados</center></h5></div>
+		  	<div class="panel-body">
+    			<div class="container">	
+    				<form id="FrmGrado" action="Procesa/P_grado.php?metodo=save" method="post" >						
+							<div class="form-group">
+								<div class="row"><!--primera fila-->   							 
+									<div class="col-md-6 container">								
+										<input type="hidden" name="TxtId" id="TxtId" class="form-control" placeholder="IdGrado" enable="false">
 									
-								
-								<div class="form-group" style="margin-top: 2em">
-								<input type="text" name="TxtGrado" id="TxtGrado" class="form-control" placeholder="Grado" required="Campo Requerido">
-								</div>						
+										<div class="col-md-12">
+										<div class="form-group" style="margin-top: 2em">
+											<input type="text" name="TxtGrado" id="TxtGrado" class="form-control" placeholder="Grado" required="Campo Requerido">
+										</div>
 
-								
-							</div>						   							 
+										<input type="submit" class="btn btn-primary btn-block" value="Guardar"></input>
+	 					 				<button type="input" onclick="sendTd(this)" class="btn btn-primary btn-block" style="margin-top: 1em">Cancelar</button>
+									</div>
+									</div>						   							 
 							
-						</div>	<!--fin segunda fila-->						
-					</div>
-						
- 					<input type="submit" class="btn btn-primary btn-block" value="Guardar"></input>
+								</div>	<!--fin segunda fila-->						
+							</div>
 
 					</form>
-				
-				
-			</div>
-			
-			<div class="clearfix"></div>
-		</div>
-		 <div class="row">
-      <div class="col-sm-10 container">
-        <table class="table table-striped table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Grado</th>                            
-              <th scope="col">Editar</th>
-              <th scope="col">Eliminar</th>
-                           
-            </tr>
-          </thead>
-          <tbody id="t_grado" >
-          </tbody>
-      </table>
-    </div>
-  </div>
+    			</div>
+    		</div>
+    	</div>
+   </div>
+<div class="col-md-3"></div>
+
+		<div class="col-md-12">	
+			<div class="panel panel-default">
+			  <div class="panel-heading"><h2 class="main-w3l-title"><center>Registros de Estudiantes</center></h2></div>
+			  	<div class="panel-body">
+	    			<div class="container">	
+	    				<div class="table-responsive">
+	    				<table class="table table-striped table-bordered">
+				          <thead>
+				            <tr>
+				              <th scope="col">#</th>
+				              <th scope="col">Grado</th>                            
+				              <th scope="col">Editar</th>
+				              <th scope="col">Eliminar</th>
+				                           
+				            </tr>
+				          </thead>
+				          <tbody id="t_grado" >
+				          </tbody>
+				      </table>
+      				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+    	</div>
 	
+
+ <div class="row">
+		 	
+      <div class="col-sm-12">
+      
+        
+  
+    </div>
+   			 
+  </div>
+
 	<!--// Institutes -->
 
 	<!-- Footer -->
@@ -301,6 +316,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             }); 
 
     }
+    function sendTd(form)
+        {   
+       		 
+        $.ajax({
+        	type : "get",
+              url : "#",
+              data : {                                                    
+              },              
+        });              
+        }
     </script>
 </body>
 

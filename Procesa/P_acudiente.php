@@ -125,8 +125,7 @@ error_reporting(E_ALL);
                 </td>
 
                 ";
-                
-                 
+               
 
                 if($_SESSION["rol"] === $_SESSION["tipou"]){                   
 echo"<td>  <button class='btn btn-primary'  onclick='editar(".json_encode($result).")'>Editar </button> </td>";
