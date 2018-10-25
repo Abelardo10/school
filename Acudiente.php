@@ -103,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<ul class="nav navbar-nav">	
 							<li><a href="Principal.php">Principal</a></li>							
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Registro <b class="caret"></b></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Registros <b class="caret"></b></a>
 									<ul class="dropdown-menu">
 										<li><a href="Docente.php">Docentes</a></li>
 										<li><a href="Estudiantes.php">Estudiantes</a></li>

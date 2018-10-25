@@ -7,6 +7,7 @@ session_start();
 $userok;
 $passok;
 $rol;
+$status;
 
 
      if(isset($_POST["btn_Login"])) {
@@ -30,7 +31,8 @@ $rol;
  
                          $userok = $row["usuario"];
                          $passok = $row["password"];
-                         $rol["Rol_id"]=$row["Rol"];
+                         $rol=$row["Rol_id"];
+                         $status =$row["Status_id"];
 
                     }
  
@@ -41,13 +43,17 @@ $rol;
  
                          session_start();                                                  
                           $_SESSION["user_session"] = $loginNombre; //nombre del usuario logueado.
+                          $rol["rol"] = $rol; //Rol del usuario logueado
+                          $status["rol"] = $status; //status del usuario logueado
                          header("Location: ../Principal.php");
  
                     }
                     else {
-
-                          echo "email or password does not exist."; // wrong details 
-                         Header("Location: /Login/Login.php?error=login");
+                     
+                          
+                         Header("Location: ../Login/Login.php?error=login");
+                         echo "<script type=\"text/javascript\">alert(\"Usuario or Password Incorrecto\");</script>";
+                         
 
                     }
  
