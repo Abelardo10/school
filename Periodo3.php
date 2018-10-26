@@ -104,22 +104,73 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- //banner -->
 	<!-- Services-Inner -->
-	<div class="courses">
-		<div class="container">
-			<h5 class="main-w3l-title">CURSOS</h5>
-			<div class="col-md-4 courses-info">
-				<h5><a href="Periodo1.php"> Primer periodo </a></p></h5>
-			</div>
-			<div class="col-md-4 courses-info">
-				<h5><a href="Periodo2.php"> Segundo periodo </a></p></h5>
-			</div>
-			<div class="col-md-4 courses-info">
-				<h5><a href="Periodo3.php"> Tercer periodo </a></p></h5>
-			</div>
-			
-			
-		</div>
-	</div>
+	<div class="row">		 	
+     	 <div class="col-sm-12" style="margin-top: 1em">
+    	</div>   			 
+  		</div>
+	<div class="col-md-12">	
+			<div class="panel panel-default">
+			  <div class="panel-heading"><h5 class="main-w3l-title"><center>Tercer Periodo</center></h5></div>
+			  	<div class="panel-body">
+	    			<div class="container">	
+	    				<div class="table-responsive">
+	    				<table border="2" class="table table-striped table-bordered table-responsive">
+					
+							<tr><!--// Primera fila -->
+								<td colspan="3">
+									<center>
+									Enseñanzas (Competencia y habilidades)
+									</center>
+								</td>							
+							</tr>
+							<tr> <!--// Segunda fila -->							
+								<td>
+									<center>
+									<p>Competencia Linguistica</p>
+									Habilidades:
+									</center>
+								</td>
+								<td>
+									<center>
+									<p>Competencia Pragmática</p>
+									Habilidades:
+									</center>
+								</td>
+								<td>
+									<center>
+									<p>Competencia Sociolinguistica</p>
+									Habilidades:
+									</center>
+								</td>
+							</tr>
+							<tr>	<!--// Tercera fila -->						
+								<td>
+									<ul>
+										<li type="disc"> o To establish comparisons.</li>										
+										<li type="disc"> o Marking inferences.</li>									
+										<li type="disc"> o Describing or telling simple situatios.</li>
+										
+									</ul>				
+
+								</td>
+								<td>
+									Competencia Pragmatica
+								</td>
+								<td>
+									Competencia ociolinguistica
+								</td>
+							</tr>				
+						</table>
+      				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+    	</div>
+    	 <div class="row">		 	
+     	 <div class="col-sm-12">
+    	</div>   			 
+  		</div>
+	
 	<!--// Services-Inner -->
 	<!-- Footer -->
 	<div class="footer-agileits-w3layouts">

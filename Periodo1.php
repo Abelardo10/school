@@ -104,6 +104,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- //banner -->
 	<!-- Services-Inner -->
+	<div class="row">		 	
+     	 <div class="col-sm-12" style="margin-top: 1em">
+    	</div>   			 
+  		</div>
 	<div class="col-md-12">	
 			<div class="panel panel-default">
 			  <div class="panel-heading"><h5 class="main-w3l-title"><center>Primer Periodo</center></h5></div>
@@ -121,13 +125,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</tr>
 							<tr> <!--// Segunda fila -->							
 								<td>
-									Competencia Linguistica
+									<center>
+									<p>Competencia Linguistica</p>
+									Habilidades:
+									</center>
 								</td>
 								<td>
-									Competencia Pragmatica
+									<center>
+									<p>Competencia Pragmática</p>
+									Habilidades:
+									</center>
 								</td>
 								<td>
-									Competencia ociolinguistica
+									<center>
+									<p>Competencia Sociolinguistica</p>
+									Habilidades:
+									</center>
 								</td>
 							</tr>
 							<tr>	<!--// Tercera fila -->						
@@ -153,15 +166,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	    		</div>
 	    	</div>
     	</div>
-    	 <div class="row">
-		 	
-      <div class="col-sm-12">
-      
-        
-  
-    </div>
-   			 
-  </div>
+    	 <div class="row">		 	
+     	 <div class="col-sm-12">
+    	</div>   			 
+  		</div>
 	
 	<!--// Services-Inner -->
 	<!-- Footer -->
