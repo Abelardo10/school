@@ -71,11 +71,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a href="index.php">Home</a></li>
-								<li><a href="about.php">About</a></li>
-								<li><a href="courses.php">Courses</a></li>
-								<li><a href="institutes.php">English School</a></li>								
-								<li><a class="active" href="contact.php">Contact</a></li>
+								<li><a href="index.php">INICIO</a></li>
+								<li><a href="about.php">ACERCA DE</a></li>
+								<li><a href="courses.php">CURSOS</a></li>								
+								<li><a class="active" href="contact.php">CONTACTENOS</a></li>
 							</ul>
 
 						</div>
@@ -108,50 +107,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- Contact -->
 	<div class="contact-page">
 		<div class="container">
-			<h5 class="main-w3l-title">Get in touch</h5>
+			<h5 class="main-w3l-title">Estar en contacto</h5>
 			<div class="form-bg">
 				<form action="#" method="post">
 					<div class="col-md-6 contact-fields">
-						<input type="text" name="Name" placeholder="Name" required="">
+						<input type="text" name="Nombre" placeholder="Nombre" required="">
 					</div>
 					<div class="col-md-6 contact-fields">
-						<input type="email" name="Email" placeholder="Email" required="">
+						<input type="email" name="Correo" placeholder="Correo" required="">
 					</div>
 					<div class="contact-fields">
-						<input type="text" name="Subject" placeholder="Subject" required="">
+						<input type="text" name="Tema" placeholder="Tema" required="">
 					</div>
 					<div class="contact-fields">
-						<textarea name="Message" placeholder="Message" required=""></textarea>
+						<textarea name="Mensaje" placeholder="Mensaje" required=""></textarea>
 					</div>
-					<input type="submit" value="Submit">
+					<input type="submit" value="Enviar">
 				</form>
 			</div>
 			<div class="contact-maps">
-				<h5 class="main-w3l-title">Find us on the map</h5>
+				<h5 class="main-w3l-title">Encuentranos en el mapa</h5>
 				<div id="horizontalTab">
 					<ul class="resp-tabs-list">
 						<li>
-							Address 1
+							Dirección 1
 						</li>
-						<li>
-							Address 2
-						</li>
-						<li>
-							Address 3
-						</li>
-						<li>
-							Address 4
-						</li>
+						
 					</ul>
 					<div class="resp-tabs-container">
 						<div class="tab1">
 							<div class="col-md-5 add-left">
-								<p class="paragraph-agileinfo"><span>Location : </span>550 LaGuardia Pl, New York, NY 10012, USA</p>
-								<p class="paragraph-agileinfo"><span>Call Us : </span>000-568-3214</p>
-								<p class="paragraph-agileinfo"><span>Email : </span><a href="mailto:info@example.com">info@example.com</a></p>
+								<p class="paragraph-agileinfo"><span>Ubicación : </span>Dg. 26b 2 #73-75, Cali, Valle del Cauca</p>
+								<p class="paragraph-agileinfo"><span>Llamanos : </span>3127347172</p>
+								<p class="paragraph-agileinfo"><span>correo : </span><a href="info@mitre.edu.co">info@example.com</a></p>
 							</div>
 							<div class="col-md-7 add-right">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10171.143717162497!2d-73.99510450880028!3d40.72023723426282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2590485a57bab%3A0xc30a1a20d5c453f4!2sD%C5%8C%2C+Cookie+Dough+Confections!5e0!3m2!1sen!2sin!4v1512641855744"></iframe>
+								<iframe src="https://www.google.com/maps/embed?pb=" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 							</div>
 							<div class="clearfix"></div>
 						</div>

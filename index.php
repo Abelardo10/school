@@ -65,11 +65,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a class="active" href="index.php">Home</a></li>
-								<li><a href="about.php">About</a></li>
-								<li><a href="courses.php">Courses</a></li>
-								<li><a href="institutes.php">English School</a></li>								
-								<li><a href="contact.php">Contact</a></li>
+								<li><a class="active" href="index.php">INICIO</a></li>
+								<li><a href="about.php">ACERCA DE</a></li>
+								<li><a href="courses.php">CURSOS</a></li>															
+								<li><a href="contact.php">CONTACTENOS</a></li>
 							</ul>
 
 						</div>
@@ -102,17 +101,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul class="rslides" id="slider3">
 						<li>
 							<div class="slider-info">
-								<h3>It is never too late to Study</h3>
-								<p>Education Needs Complete Solution</p>
-								<a href="about.php">About Us</a>
+								<h3>Nunca es demasiado tarde para estudiar</h3>
+								<p>La educación necesita una solución completa</p>
+								<a href="about.php">ACERCA DE</a>
 							</div>
 						</li>
 						<li>
 
 							<div class="slider-info">
-								<h3>The best learning English School</h3>
-								<p>Successful career starts with good training</p>
-								<a href="about.php">About Us</a>
+								<h3>La mejor escuela de inglés para aprender.</h3>
+								<p>La carrera exitosa comienza con un buen entrenamiento.</p>
+								<a href="about.php">ACERCA DE</a>
 							</div>
 						</li>
 
@@ -127,9 +126,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--about-->
 	<div class="about-section" id="about">
 		<div class="container">
-			<h5 class="main-w3l-title">About Us</h5>
+			<h5 class="main-w3l-title">ACERCA DE</h5>
 			<div class="about-top">
-				<h3 class="subheading-wthree">Something About Us</h3>
+				<h3 class="subheading-wthree">Algo sobre nosotros</h3>
 				<p class="paragraph-agileinfo">
 					Somos una plataforma llamada english school que tiene el servicio de ayudar a los jóvenes de los grados octavos en la parte de ingles
 				</p>
@@ -145,8 +144,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 				<div class="about-w3ls-right">
 					<h3 class="subheading-wthree">Bienvenido a los temas de english school</h3>
-					<p class="paragraph-agileinfo">We offer great variety of individual and group programs. Our clients' and our experience proves that the following courses
-						can literally change your life!</p>
+					<p class="paragraph-agileinfo">Ofrecemos gran variedad de programas individuales y grupales. La experiencia de nuestros clientes y nuestra prueba de que los siguientes cursos  ¡Literalmente puede cambiar tu vida!</p>
 					<ul>
 						<li><span class="fa fa-check-square-o" aria-hidden="true"></span>See our best skills</li>
 						<li><span class="fa fa-check-square-o" aria-hidden="true"></span>Learn courses online</li>
@@ -163,24 +161,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- stats -->
 	<div class="stats">
 		<div class="container">
-			<h5 class="main-w3l-title white-clr">Reasons to Choose Us</h5>
+			<h5 class="main-w3l-title white-clr">Razones para elegirnos</h5>
 			<div class="stats_inner">
 				<div class="col-md-4 col-sm-4 stat-grids">
 					<p class="counter">2,879</p>
 					<div class="stats-text">
-						<h3>Students Successive</h3>
+						<h3>Estudiantes sucesivos</h3>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4 stat-grids">
 					<p class="counter">953</p>
 					<div class="stats-text">
-						<h3>Courses</h3>
+						<h3>Cursos</h3>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4 stat-grids">
 					<p class="counter">1,546</p>
 					<div class="stats-text">
-						<h3>Competitions Won</h3>
+						<h3>Concursos ganados</h3>
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -195,11 +193,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="services-info top-services">
 				
 				<div class="header-top">
-					<h3 class="subheading-wthree white-clr">Let's Login Now</h3>
-					<span>Get Enrolled & Start better future with us!</span>
+					<h3 class="subheading-wthree white-clr"> iniciar sesión ahora</h3>
+					<span>¡ comience un mejor futuro con nosotros!</span>
 					
 					<ul class="form-buttons">
-						<li><a href="Login/Login.php"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Login</a></li>
+						<li><a href="Login/Login.php"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Iniciar sesión</a></li>
 					</ul>
 
 					<div class="clearfix"></div>
@@ -208,13 +206,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="services-grids">
 			<div class="services-info bottom-services">
-				<h3 class="subheading-wthree">Our Packages</h3>
-				<p class="paragraph-agileinfo">The institution manages 3 levels of English a1, a2, b1 and b2.</p>
+				<h3 class="subheading-wthree">Nuestros paquetes</h3>
+				<p class="paragraph-agileinfo">La institución gestiona 3 niveles de inglés a1, a2, b1 y b2.</p>
 				<div class="serv-inner1">
 					<div class="serv-left">
 						<h6><span>Level</span>A1</h6>
 						<ul>
-							<li>Beginner, he is still not able to use the language in any practical work situation.</li>
+							<li>Principiante, todavía no puede usar el idioma en ninguna situación de trabajo práctico</li>
 							
 						</ul>
 					</div>
@@ -222,10 +220,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h6><span>Level</span>A2</h6>
 						<ul>
 							<li>
-							He has very basic notions of the language. He is able to draw the general sense of simple readings.
+							Tiene nociones muy básicas de la lengua. Él es capaz de dibujar el sentido general de las lecturas simples. 
 							</li>
 							<li>
-							He is not able to write in the language.
+							No es capaz de escribir en el idioma.
 							</li>
 							
 						</ul>
@@ -236,10 +234,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h6><span>Level</span>B1</h6>
 						<ul>
 							<li>
-							Read writings related to your work with some difficulty.
+							Lee escritos relacionados con tu trabajo con alguna dificultad
 							</li>
 							<li>
-							He needs help to write simple writings.
+							 Necesita ayuda para escribir escritos sencillos..
 							</li>
 							
 						</ul>
@@ -248,12 +246,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h6><span>Level</span>B1+</h6>
 						<ul>
 							<li>
-								Read writings related to his work without major difficulties.
+								Lee escritos relacionados con su obra sin mayores dificultades.
 							</li>
 							<li>
-								Write simple writings
- 
-								You can not write reports except the most routine.
+								Escribir escritos sencillos No se pueden escribir informes excepto los más rutinarios.
 							</li>
 							
 						</ul>
@@ -269,91 +265,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- //services -->
 	
-	<!-- Testimonials -->
-	<div class="testimonials-section">
-		<div class="container">
-			<h5 class="main-w3l-title">Testimonials</h5>
-			<section class="slider">
-				<div class="flexslider">
-					<ul class="slides">
-						<li>
-							<div class="testimonial-agileits-w3layouts">
-								<p>Sed tempus vestibulum lacus blandit faucibus. Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula,
-									at imperdiet urna. </p>
-								<img src="images/t1.jpg" alt=" " class="img-responsive">
-								<div class="test-name">
-									<h5>Julia Rose</h5>
-									<div class="rating-icons">
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star" aria-hidden="true"></span>
-									</div>
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</li>
-						<li>
-							<div class="testimonial-agileits-w3layouts">
-								<p>Sed tempus vestibulum lacus blandit faucibus. Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula,
-									at imperdiet urna. </p>
-								<img src="images/t2.jpg" alt=" " class="img-responsive">
-								<div class="test-name">
-									<h5>Jahnatan Smith</h5>
-									<div class="rating-icons">
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star-o" aria-hidden="true"></span>
-									</div>
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</li>
-						<li>
-							<div class="testimonial-agileits-w3layouts">
-								<p>Sed tempus vestibulum lacus blandit faucibus. Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula,
-									at imperdiet urna. </p>
-								<img src="images/t3.jpg" alt=" " class="img-responsive">
-								<div class="test-name">
-									<h5>Rosalind Cloer</h5>
-									<div class="rating-icons">
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star-o" aria-hidden="true"></span>
-									</div>
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</li>
-						<li>
-							<div class="testimonial-agileits-w3layouts">
-								<p>Sed tempus vestibulum lacus blandit faucibus. Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula,
-									at imperdiet urna. </p>
-								<img src="images/t4.jpg" alt=" " class="img-responsive">
-								<div class="test-name">
-									<h5>Amie Bublitz</h5>
-									<div class="rating-icons">
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star" aria-hidden="true"></span>
-										<span class="fa fa-star-o" aria-hidden="true"></span>
-										<span class="fa fa-star-o" aria-hidden="true"></span>
-									</div>
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</li>
-					</ul>
-				</div>
-			</section>
-		</div>
-	</div>
-	<!-- Testimonials -->
+	
 
 	<!-- Footer -->
 	<div class="footer-agileits-w3layouts">

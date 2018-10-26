@@ -70,11 +70,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a href="index.php">Home</a></li>
-								<li><a class="active" href="about.php">About</a></li>
-								<li><a href="courses.php">Courses</a></li>
-								<li><a href="institutes.php">English School</a></li>								
-								<li><a href="contact.php">Contact</a></li>
+								<li><a href="index.php">INICIO</a></li>
+								<li><a class="active" href="about.php">ACERCA DE</a></li>
+								<li><a href="courses.php">CURSOS</a></li>
+																
+								<li><a href="contact.php">CONTACTENOS</a></li>
 							</ul>
 
 						</div>
@@ -107,11 +107,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--about-->
 	<div class="about-section" id="about">
 		<div class="container">
-			<h5 class="main-w3l-title">About Us</h5>
+			<h5 class="main-w3l-title">SOBRE NOSOTROS</h5>
 			<div class="about-top">
-				<h3 class="subheading-wthree">Something About Us</h3>
+				<h3 class="subheading-wthree">Algo sobre nosotros</h3>
 				<p class="paragraph-agileinfo">
-					Somos una plataforma llamada english school que tiene el servicio de ayudar a los jóvenes de los grados octavos en la parte de ingles
+					Somos una plataforma llamada english school que tiene el servicio de ayudar a los jóvenes de los grados octavos en la parte de ingles.
 				</p>
 			</div>
 			<div class="about-main">
@@ -127,8 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h3 class="subheading-wthree">
 						Bienvenido a los temas de english school
 					</h3>
-					<p class="paragraph-agileinfo">We offer great variety of individual and group programs. Our clients' and our experience proves that the following courses
-						can literally change your life!</p>
+					<p class="paragraph-agileinfo">Ofrecemos gran variedad de programas individuales y grupales. La experiencia de nuestros clientes y nuestra prueba de que los siguientes cursos  ¡Literalmente puede cambiar tu vida!</p>
 					<ul>
 						<li><span class="fa fa-check-square-o" aria-hidden="true"></span>See our best skills</li>
 						<li><span class="fa fa-check-square-o" aria-hidden="true"></span>Learn courses online</li>
@@ -172,37 +171,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--// about-mid -->
 	<!-- Team -->
-	<div class="team-section" id="team">
-		<div class="container">
-			<h5 class="main-w3l-title">Our Trainers</h5>
-			<div class="col-md-6 team-left">
-				<p class="paragraph-agileinfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tristique est, et egestas odio. Mauris ac tristique
-					arcu, sed interdum risus.Integer quis tristique est, et egestas odio.</p>
-				<p class="paragraph-agileinfo">Mauris ac tristique arcu, sed interdum risus.Integer quis tristique est, et egestas odio. Mauris ac tristique arcu, sed
-					interdum risus.</p>
-				
-			</div>
-			<div class="col-md-6 team-right">
-				<div class="col-md-6 col-sm-6 col-xs-6 team-grid">
-					<img class="team-img img-responsive" src="images/t1.jpg" alt="">
-					<h6>Andrew Bert</h6>
-					<div class="social-icons-agileits">
-						<ul>
-							<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-							<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-							<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-						</ul>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="col-md-6 col-sm-6 col-xs-6 team-grid t2">
-					<img class="team-img img-responsive" src="images/t2.jpg" alt="">
-					<h6>Mecan smith</h6>
-					<div class="social-icons-agileits">
-						<ul>
-							<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-							<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-							<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+	
+						
 						</ul>
 					</div>
 					<div class="clearfix"> </div>

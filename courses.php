@@ -70,10 +70,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a href="index.php">Home</a></li>
-								<li><a href="about.php">About</a></li>								
-								<li><a href="institutes.php">English School</a></li>								
-								<li><a href="contact.php">Contact</a></li>
+								<li><a href="index.php">INICIO</a></li>
+								<li><a href="about.php">ACERCA DE</a></li>	
+								<li><a href="courses.php">CURSOS</a></li>													
+								<li><a href="contact.php">CONTACTENOS</a></li>
 							</ul>
 
 						</div>
@@ -106,7 +106,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- Services-Inner -->
 	<div class="courses">
 		<div class="container">
-			<h5 class="main-w3l-title">Courses</h5>
+			<h5 class="main-w3l-title">CURSOS</h5>
 			<div class="col-md-4 courses-info">
 				<h5>PHP Web Development</h5>
 				<div class="c-image">
