@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-10-2018 a las 03:40:32
--- Versión del servidor: 10.1.35-MariaDB
--- Versión de PHP: 7.2.9
+-- Tiempo de generación: 25-10-2018 a las 13:17:59
+-- Versión del servidor: 10.1.16-MariaDB
+-- Versión de PHP: 7.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -41,6 +39,33 @@ CREATE TABLE `tbacudiente` (
   `Barrio_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Gestión de acudiente';
 
+--
+-- Volcado de datos para la tabla `tbacudiente`
+--
+
+INSERT INTO `tbacudiente` (`Acudiente_id`, `primer_nombre`, `segundo_nombre`, `apellido_paterno`, `apellido_materno`, `tipo_documento`, `documento_identidad`, `email`, `grupo_sanguineo`, `Barrio_id`) VALUES
+(2, 'prueba', 'prueba', 'prueba', 'prueba', 'Cedula', 1212121, 'prueba@gmail.com', 'A-', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbbarrio`
+--
+
+CREATE TABLE `tbbarrio` (
+  `Barrio_id` int(11) NOT NULL,
+  `barrio` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Gestión de Barrio';
+
+--
+-- Volcado de datos para la tabla `tbbarrio`
+--
+
+INSERT INTO `tbbarrio` (`Barrio_id`, `barrio`) VALUES
+(1, 'Los lagos'),
+(2, 'Las Orquideas'),
+(3, 'Andres Sanin');
+
 -- --------------------------------------------------------
 
 --
@@ -65,7 +90,7 @@ CREATE TABLE `tbdocente` (
 --
 
 INSERT INTO `tbdocente` (`Docente_id`, `primer_nombre`, `segundo_nombre`, `apellido_paterno`, `apellido_materno`, `tipo_documento`, `documento_identidad`, `email`, `grupo_sanguineo`, `Barrio_id`) VALUES
-(1, 'Andres', '', 'Perez', '', 'Cedula', 10101045, 'perez@gmail.com', 'AB+', NULL);
+(2, 'prueba', 'prueba', 'prueba', 'prueba', 'Cedula', 1212121212, 'prueba@gmail.com', 'A-', NULL);
 
 -- --------------------------------------------------------
 
@@ -93,7 +118,7 @@ CREATE TABLE `tbestudiante` (
 --
 
 INSERT INTO `tbestudiante` (`Estudiante_id`, `primer_nombre`, `segundo_nombre`, `apellido_paterno`, `apellido_materno`, `tipo_documento`, `documento_identidad`, `email`, `Grado_id`, `Barrio_id`, `Acudiente_id`, `grupo_sanguineo`) VALUES
-(1, 'Cristian', 'Camilo', 'Bastidas', '', 'Tarjeta', 1007234567, 'camilo@gmail.com', 1, 1, 1, 'A+');
+(2, 'Cristian', 'Camilo', 'Bastidas', 'Sinisterra', 'Cedula', 10101010, 'camilo@gmail.com', 0, 0, 0, 'B+');
 
 -- --------------------------------------------------------
 
@@ -111,11 +136,9 @@ CREATE TABLE `tbgrado` (
 --
 
 INSERT INTO `tbgrado` (`Grado_id`, `grado`) VALUES
-(1, '8-2'),
-(2, '8-1'),
-(3, '8-5'),
-(4, '8-3'),
-(5, '8-4');
+(1, '8-1'),
+(2, '8-2'),
+(4, '8-3');
 
 -- --------------------------------------------------------
 
@@ -155,7 +178,8 @@ CREATE TABLE `tbrol` (
 
 INSERT INTO `tbrol` (`Rol_id`, `rol`) VALUES
 (1, 'administrador'),
-(2, 'Docente');
+(3, 'Docente'),
+(4, 'Estudiante');
 
 -- --------------------------------------------------------
 
@@ -185,6 +209,12 @@ INSERT INTO `tbstatus` (`Status_id`, `status`) VALUES
 --
 ALTER TABLE `tbacudiente`
   ADD PRIMARY KEY (`Acudiente_id`);
+
+--
+-- Indices de la tabla `tbbarrio`
+--
+ALTER TABLE `tbbarrio`
+  ADD PRIMARY KEY (`Barrio_id`);
 
 --
 -- Indices de la tabla `tbdocente`
@@ -230,45 +260,42 @@ ALTER TABLE `tbstatus`
 -- AUTO_INCREMENT de la tabla `tbacudiente`
 --
 ALTER TABLE `tbacudiente`
-  MODIFY `Acudiente_id` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `Acudiente_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT de la tabla `tbbarrio`
+--
+ALTER TABLE `tbbarrio`
+  MODIFY `Barrio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `tbdocente`
 --
 ALTER TABLE `tbdocente`
-  MODIFY `Docente_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `Docente_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `tbestudiante`
 --
 ALTER TABLE `tbestudiante`
-  MODIFY `Estudiante_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `Estudiante_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `tbgrado`
 --
 ALTER TABLE `tbgrado`
-  MODIFY `Grado_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
+  MODIFY `Grado_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `tblogin`
 --
 ALTER TABLE `tblogin`
   MODIFY `Login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT de la tabla `tbrol`
 --
 ALTER TABLE `tbrol`
-  MODIFY `Rol_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
+  MODIFY `Rol_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `tbstatus`
 --
 ALTER TABLE `tbstatus`
   MODIFY `Status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

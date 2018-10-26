@@ -60,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 				<div class="header-bottom-w3layouts">
 					<div class="main-w3ls-logo">
-						<h1><a href="index.html"><img src="images/logo.png" width="100" height="100"></span>English School</a></h1>
+						<h1><a href="index.php"><img src="images/logo.png" width="100" height="100"></span>English School</a></h1>
 					</div>
 					<!-- navigation -->
 					<nav class="navbar navbar-default">
@@ -79,9 +79,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">	
-							<li><a href="Principal.php">Principal</a></li>							
+							<li><a href="Principal.php">Principal</a></li>
+														
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Registro <b class="caret"></b></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Registros <b class="caret"></b></a>
 									<ul class="dropdown-menu">
 
 										<li><a href="Docente.php">Docentes</a></li>
@@ -91,17 +92,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li><a href="Grado.php">Grados</a></li>
 										<li><a href="Barrio.php">Barrios</a></li>
 										<li><a href="Rol.php">Rol</a></li>
-										<li><a href="Status.php">Estatus</a></li>
+										<li><a href="Status.php"> Estatus</a></li>										
 									</ul>
 								</li>
 								<li class="dropdown">
 				                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 				                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
 				                    </a>
-				                    <ul class="dropdown-menu dropdown-user">				                       
-				                        <li><a href="Salir.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar secion</a>
-				                        </li>
-				                    </ul>
+				                    <ul class="dropdown-menu dropdown-user">
+
+				                        <li>
+				                        	<a href="Salir.php">
+				                        		<i class="fa fa-sign-out fa-fw"></i> Cerrar secion
+				                        	</a>
+				                        </li>                        
+
+				                    </ul>	                     
                     					<!-- /.dropdown-user -->
                				 	</li>							
 								
@@ -140,10 +146,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="gallery">
 		<div class="container">
 			<h5 class="main-w3l-title">
-			Bienvenido <?php echo $_SESSION["user_session"]; ?>
+			Bienvenido <?php echo $_SESSION["user_session"];		 
+
+			 ?>
 			</h5>
 			
-			Informacion de admin
+			
 			
 			<div class="clearfix"></div>
 		</div>

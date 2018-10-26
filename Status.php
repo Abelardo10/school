@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<ul class="nav navbar-nav">		
 							<li><a href="Principal.php">Principal</a></li>						
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Registro <b class="caret"></b></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Registros <b class="caret"></b></a>
 									<ul class="dropdown-menu">
 										<li><a href="Docente.php">Docentes</a></li>
 										<li><a href="Estudiantes.php">Estudiantes</a></li>
@@ -127,61 +127,75 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- //banner -->
 	<!-- Institutes -->
-	<div class="gallery">
-		
-			<h5 class="main-w3l-title">Estatus</h5>
-			
-			<div class="container">				
-
-					<form id="FrmRol" action="Procesa/P_status.php?metodo=save" method="post" style="background-color: #f5f5f5;padding: 5px; margin:20px">
-
-						<div class="card-header"><h1>Registrar Estatus</h1></div>
-
-						<div class="form-group">
-							 <div class="row"><!--primera fila-->   							 
-							<div class="col-md-6 container">
-
-								
-								<input type="hidden" name="TxtId" id="TxtId" class="form-control" placeholder="Idrol" enable="false" >
-								
-															
-
-								<div class="form-group" style="margin-top: 2em">
-								<input type="text" name="TxtStatus" id="TxtStatus" class="form-control" placeholder="Descripción" required="Campo Requerido">
-								</div>								
-							</div>  							 
-											
-					</div>
-						
- 					<div class="form-group">
- 					<input type="submit" class="btn btn-primary btn-block" value="Guardar"></input>
-
- 					 <button type="input" onclick="sendTd(this)" class="btn btn-primary btn-block" style="margin-top: 1em">Cancelar</button>
-					</div>
-
-					</form>
-				
-				
+		<div class="gallery">
+			<div class="col-md-3">				
 			</div>
-			
-			<div class="clearfix"></div>
-		</div>
-		 <div class="row">
-      <div class="col-sm-10 container">
-        <table class="table table-striped table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Descripción</th>              
-              <th scope="col">Editar</th>
-              <th scope="col">Eliminar</th>                           
-            </tr>
-          </thead>
-          <tbody id="t_status" >
-          </tbody>
-      </table>
-    </div>
+				<div class="col-md-6">	
+					<div class="panel panel-default">
+		  				<div class="panel-heading"><h5 class="main-w3l-title"><center>Registrar Status</center></h5>
+		  				</div>
+		  					<div class="panel-body">
+    							<div class="container">
+	    							<form id="FrmRol" action="Procesa/P_status.php?metodo=save" method="post">
+											<div class="form-group">
+												<div class="row"><!--primera fila-->   							 
+													<div class="col-md-6 container">								
+															<input type="hidden" name="TxtId" id="TxtId" class="form-control" placeholder="Idrol" enable="false" >					
+															
+														<div class="col-md-12">
+
+															<div class="form-group" style="margin-top: 2em">
+																<input type="text" name="TxtStatus" id="TxtStatus" class="form-control" placeholder="Descripción" required="Campo Requerido">
+															</div>	
+						 					
+										 						<input type="submit" class="btn btn-primary btn-block" value="Guardar"></input>
+
+										 					 	<button type="input" onclick="sendTd(this)" class="btn btn-primary btn-block" style="margin-top: 1em">Cancelar</button>
+														</div>
+													</div>
+												</div>
+											</div>
+									</form>		
+    							</div>
+    						</div>
+    				</div>
+    		</div>
+    	</div>
+
+
+<div class="col-md-3"></div>
+
+	<div class="col-md-12">	
+			<div class="panel panel-default">
+			  <div class="panel-heading"><h2 class="main-w3l-title"><center>Registros de Status</center></h2></div>
+			  	<div class="panel-body">
+	    			<div class="container">	
+	    				<div class="table-responsive">
+	    				<table class="table table-striped table-bordered">
+					          <thead>
+					            <tr>
+					              <th scope="col">#</th>
+					              <th scope="col">Descripción</th>              
+					              <th scope="col">Editar</th>
+					              <th scope="col">Eliminar</th>                           
+					            </tr>
+					          </thead>
+					          <tbody id="t_status" >
+					          </tbody>
+					      </table>
+      				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+    	</div>
+
+ <div class="row">		 	
+      <div class="col-md-12">
+      </div>   			 
   </div>
+
+
+		 
 	
 	<!--// Institutes -->
 
