@@ -107,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- Contact -->
 	<div class="contact-page">
 		<div class="container">
-			<h5 class="main-w3l-title">Estar en contacto</h5>
+			<h5 class="main-w3l-title">Econtactenos</h5>
 			<div class="form-bg">
 				<form action="#" method="post">
 					<div class="col-md-6 contact-fields">

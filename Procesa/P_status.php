@@ -47,7 +47,7 @@ error_reporting(E_ALL);
     function eliminar(){
         $con = new MySQL();
         $c = $con->abrirConexion();        
-        $var_consulta  = "DELETE FROM tbstatus WHERE  Status_id = ".$_POST['Id'].";"; 
+        $var_consulta  = "DELETE FROM tbstatus WHERE  Status_id = ".$_POST['id'].";"; 
         $c->query($var_consulta);
         $con->cerrarConexion();
         header("Location: ../Status.php?"); 
