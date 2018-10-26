@@ -39,9 +39,8 @@ error_reporting(E_ALL);
        ) VALUES ('";
         $var_consulta .= $_POST['TxtUsuario']."'
         ,'".$_POST['TxtPassword']."'
-        ,'".$_POST['ddlStatus']."'
-        ,'".$_POST['ddlRol']."'
-
+        ,".$_POST['ddlStatus']."
+        ,".$_POST['ddlRol']."
     );";
         $c->query($var_consulta);
         $con->cerrarConexion();
@@ -62,7 +61,8 @@ error_reporting(E_ALL);
     function actualizar(){
         $con = new MySQL();
         $c = $con->abrirConexion();
-        $var_consulta  = "UPDATE tblogin SET usuario = '".$_POST['TxtUsuario']."'
+        $var_consulta  = "UPDATE tblogin 
+        SET usuario = '".$_POST['TxtUsuario']."'
         ,password = '".$_POST['TxtPassword']."'
         ,Status_id = '".$_POST['ddlStatus']."'
         ,Rol_id = '".$_POST['ddlRol']."'
