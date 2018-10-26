@@ -37,6 +37,7 @@ include('conexion.php');
 				{
 				    echo "No hubo resultados";
 				}
+				
 				$c->close(); //cerramos la conexión
 
 ?>

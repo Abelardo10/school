@@ -27,10 +27,25 @@ include('conexion.php');
 				 
 				if ($result->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
 				{
-				    $combobit="";
+				    $ddlBarrio="";
 				    while ($row = $result->fetch_array(MYSQLI_ASSOC)) 
 				    {
-				        $combobit .=" <option value='".$row['Barrio_id']."'>".$row['barrio']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
+				        $ddlBarrio .=" <option value='".$row['Barrio_id']."'>".$row['barrio']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
+				    }
+				}
+				else
+				{
+				    echo "No hubo resultados";
+				}
+				$sql="SELECT * from tbgrado";
+				$result = $c->query($sql); //usamos la conexion para dar un resultado a la variable
+				 
+				if ($result->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
+				{
+				    $ddlGrado="";
+				    while ($row = $result->fetch_array(MYSQLI_ASSOC)) 
+				    {
+				        $ddlGrado .=" <option value='".$row['Grado_id']."'>".$row['grado']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
 				    }
 				}
 				else
@@ -235,8 +250,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								 <div class="form-group">
 							          <label for="Sexo">Grado</label>
 							          <select class="form-control" id="ddlGrado" name="ddlGrado">
-							            <option value="select">Seleccione...</option>
-							                       
+							            <option value="0">Seleccione...</option>
+							                       <?php echo $ddlGrado; ?>
 							          </select>
 							     </div>
 
@@ -244,7 +259,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							          <label for="Sexo">Barrio</label>
 							          <select class="form-control" id="ddlBarrio" name="ddlBarrio">
 							            <option value="0">Seleccione...</option>
-							                        <?php echo $combobit; ?>
+							                        <?php echo $ddlBarrio; ?>
 							          </select>
 							     </div>
 

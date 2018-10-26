@@ -36,6 +36,7 @@ if(!isset($_SESSION['user_session']))
 				{
 				    echo "No hubo resultados";
 				}
+				
 				$c->close(); //cerramos la conexión
 
 ?>
