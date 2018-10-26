@@ -85,6 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li><a href="Grado.php">Grados</a></li>
 										<li><a href="Barrio.php">Barrios</a></li>										
 										<li><a href="Status.php">Estatus</a></li>
+										<li><a href="Register.php">Login</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">

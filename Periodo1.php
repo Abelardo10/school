@@ -104,37 +104,65 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- //banner -->
 	<!-- Services-Inner -->
-	<div class="courses">
-		<div class="container">
-			<h5 class="main-w3l-title">CURSOS</h5>
-			<div class="col-md-4 courses-info">
-				<h5><a href="Periodo1.php"> Primer periodo </a></p></h5>
-			</div>
-			<div class="col-md-4 courses-info">
-				<h5>Segundo Periodo</h5>
-				<div class="c-image">
-					<img src="images/t2.jpg" alt=" " class="img-responsive">
-					<h6>Trainer Name</h6>
-					<div class="clearfix"></div>
-				</div>
-				<p class="numbers"><span>30</span> Students</p>
-				<p class="paragraph-agileinfo">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
-				<p class="batch">Batch Starts from <span>15 Jan 2018</span></p>
-			</div>
-			<div class="col-md-4 courses-info">
-				<h5>Tercer Periodo</h5>
-				<div class="c-image">
-					<img src="images/t3.jpg" alt=" " class="img-responsive">
-					<h6>Trainer Name</h6>
-					<div class="clearfix"></div>
-				</div>
-				<p class="numbers"><span>40</span> Students</p>
-				<p class="paragraph-agileinfo">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
-				<p class="batch">Batch Starts from <span>15 Feb 2018</span></p>
-			</div>
-			
-		</div>
-	</div>
+	<div class="col-md-12">	
+			<div class="panel panel-default">
+			  <div class="panel-heading"><h5 class="main-w3l-title"><center>Primer Periodo</center></h5></div>
+			  	<div class="panel-body">
+	    			<div class="container">	
+	    				<div class="table-responsive">
+	    				<table border="2" class="table table-striped table-bordered table-responsive">
+					
+							<tr><!--// Primera fila -->
+								<td colspan="3">
+									<center>
+									Enseñanzas (Competencia y habilidades)
+									</center>
+								</td>							
+							</tr>
+							<tr> <!--// Segunda fila -->							
+								<td>
+									Competencia Linguistica
+								</td>
+								<td>
+									Competencia Pragmatica
+								</td>
+								<td>
+									Competencia ociolinguistica
+								</td>
+							</tr>
+							<tr>	<!--// Tercera fila -->						
+								<td>
+									<ul>
+										<li type="disc"> o To establish comparisons.</li>										
+										<li type="disc"> o Marking inferences.</li>									
+										<li type="disc"> o Describing or telling simple situatios.</li>
+										
+									</ul>				
+
+								</td>
+								<td>
+									Competencia Pragmatica
+								</td>
+								<td>
+									Competencia ociolinguistica
+								</td>
+							</tr>				
+						</table>
+      				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+    	</div>
+    	 <div class="row">
+		 	
+      <div class="col-sm-12">
+      
+        
+  
+    </div>
+   			 
+  </div>
+	
 	<!--// Services-Inner -->
 	<!-- Footer -->
 	<div class="footer-agileits-w3layouts">
