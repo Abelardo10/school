@@ -143,14 +143,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 
 				<div class="about-w3ls-right">
-					<h3 class="subheading-wthree">Bienvenido a los temas de english school</h3>
+					<h3 class="subheading-wthree">Bienvenido a las competencias de english school</h3>
 					<p class="paragraph-agileinfo">Ofrecemos gran variedad de programas individuales y grupales. La experiencia de nuestros clientes y nuestra prueba de que los siguientes cursos  ¡Literalmente puede cambiar tu vida!</p>
 					<ul>
-						<li><span class="fa fa-check-square-o" aria-hidden="true"></span>See our best skills</li>
-						<li><span class="fa fa-check-square-o" aria-hidden="true"></span>Learn courses online</li>
-						<li><span class="fa fa-check-square-o" aria-hidden="true"></span>Best trainers</li>
-						<li><span class="fa fa-check-square-o" aria-hidden="true"></span>Student Guidance</li>
-						<li><span class="fa fa-check-square-o" aria-hidden="true"></span>Learn With Fun</li>
+						<li><span class="fa fa-check-square-o" aria-hidden="true"></span>pragmatica</li>
+						<li><span class="fa fa-check-square-o" aria-hidden="true"></span>linguistica</li>
+						<li><span class="fa fa-check-square-o" aria-hidden="true"></span>socio linguistica textual</li>
+						
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
@@ -164,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h5 class="main-w3l-title white-clr">Razones para elegirnos</h5>
 			<div class="stats_inner">
 				<div class="col-md-4 col-sm-4 stat-grids">
-					<p class="counter">2,879</p>
+					<p class="counter">70</p>
 					<div class="stats-text">
 						<h3>Estudiantes sucesivos</h3>
 					</div>

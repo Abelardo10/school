@@ -154,10 +154,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 								</td>
 								<td>
-									Competencia Pragmatica
+									<ul>
+										<li type="disc"> o Writing paragraphs and cards.</li>										
+										<li type="disc"> o Figuring out true and false statements.</li>									
+										
+										
+									</ul>
+									
 								</td>
 								<td>
-									Competencia ociolinguistica
+									<ul>
+										<li type="disc"> o To organize short stories or descriptions.</li>										
+										<li type="disc"> o Recognizing words and expressions.</li>									
+										<li type="disc"> o Finding out specific information.</li>
+										
+									</ul>
 								</td>
 							</tr>				
 						</table>

@@ -126,39 +126,45 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<tr> <!--// Segunda fila -->							
 								<td>
 									<center>
-									<p>Competencia Linguistica</p>
+									<p>Competencia pragmatica Linguistica</p>
 									Habilidades:
 									</center>
 								</td>
 								<td>
 									<center>
-									<p>Competencia Pragmática</p>
+									<p>Competencia Pragmática y sociolinguistica</p>
 									Habilidades:
 									</center>
 								</td>
-								<td>
-									<center>
-									<p>Competencia Sociolinguistica</p>
-									Habilidades:
-									</center>
-								</td>
-							</tr>
+								
+									
+									
+									
+									
+								
+							
 							<tr>	<!--// Tercera fila -->						
 								<td>
 									<ul>
-										<li type="disc"> o To establish comparisons.</li>										
+										<li type="disc"> o To organize short stories or descriptions.</li>										
 										<li type="disc"> o Marking inferences.</li>									
-										<li type="disc"> o Describing or telling simple situatios.</li>
+										
 										
 									</ul>				
 
 								</td>
 								<td>
-									Competencia Pragmatica
+									<ul>
+										<li type="disc"> o Describing or telling simple situations.</li>										
+										<li type="disc"> o Completing conversations, interpreting drawing.</li>									
+										
+										
+									</ul>	
+									
 								</td>
-								<td>
-									Competencia ociolinguistica
-								</td>
+								
+									
+								
 							</tr>				
 						</table>
       				</div>
